@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Comfort</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Lora|Pt+Sans|Raleway" rel="stylesheet">
+        <script src="assets/js/jquery-1.9.1.js"></script>
+        <script src = "assets/js/script.js"></script>
+    </head>
+    <body>
+        <!-- Sidebar Icon -->
+        <div class="toggle-container">
+        <div id = "sidebar-button">
+            <a id="nav-toggle"> MENU</a>
+        </div>
+        </div>
+
+        <!-- Sidebar -->
+        <nav class = "sidebar-container">
+            <ul>
+                <div id="close-icon">
+                    <img src="assets/img/close.svg" width="10px"></li></div>
+                <br>
+
+                <a href = "index.html">
+                    <li class="sidebar-item">Home</li>
+                    <hr>
+                </a>
+                <li class="sidebar-title">Projects</li>
+                <a href = "ui-1.html">
+                    <li class="sidebar-item">&nbsp&nbsp re:birth</li>
+                </a>
+                <a href = "comfort.html">
+                    <li class="sidebar-item">&nbsp&nbsp How Far From Comfort?</li>
+                </a>
+                <a href = "arch.html">
+                    <li class="sidebar-item">&nbsp&nbsp Architecture</li>
+                </a>
+                <a href = "thesis.html">
+                    <li class="sidebar-item">&nbsp&nbsp Thesis Preview</li>
+                </a>
+                <hr>
+                <a href = "experience.html">
+                    <li class="sidebar-item">Experience</li>
+                </a>
+                <a href = "index.html#aboutme-section">
+                    <li class="sidebar-item">About Lauren</li>
+                </a>
+                <a href = "index.html#contact-section">
+                    <li class="sidebar-item">Contact Lauren</li>
+                </a>
+
+            </ul>
+        </nav>
+
+        <!-- Page Wrapper, Consisting of All the Sections -->
+
+        <!-- top navigation -->
+        <div id="nav-items-container">
+            <ul>
+                <li class="nav-items"><a href="index.html#projects-section">Projects</a></li>
+                <li class="nav-items"><a href="index.html#contact-section">Contact</a></li>
+            <ul>
+            <div class="clear"></div>
+        </div>
+
+
+        <!-- contents -->
+
+        <div class = "page-wrapper">
+            <section class ="section" id ="see-more">
+                <div class = "text" id = "data-text">
+                    <div class= "section-container">
+                    <div class="title-text"> How Far From Comfort? </div>
+                    <div class="clear"></div>
+                    <div class="tag">Data</div>
+                    <div class="tag">Data Viz</div>
+                    <div class="tag">ARCH 229: Data Vizualization for Building Simulations</div>
+
+                    <div class="clear"></div>
+                <img src="assets/img/viz.gif"  class ="diagram">
+                <div class="body-text long-text">
+                    Building scientists and architects use weather data collected from weather towers. This information is readily available as epw files. However as this information is vast, it is important that there are clear methods for visualizing these. Many of the methods so far are difficult to look at and see.
+                </div>
+
+
+                <div class="header"> The Problem</div><br>
+                <img src="assets/img/climate-consultant.jpg"  class ="diagram">
+                <div class="body-text long-text">
+                    Many of the charts used to interpret climate data are very hard to use. Looking at this chart from <a href="http://www.energy-design-tools.aud.ucla.edu/climate-consultant/request-climate-consultant.php">Climate Consultant</a>, we see an overlay of dry bulb temperature, relative humidity, and the comfort standard. While you can see the general trend and compare how each looks different month to month, the problem is that you can't see the exact numbers or pieces of information that are on the age.
+                </div>
+                <div class="clear"></div>
+
+                <div class="header"> The Goal</div><br>
+                <div class="body-text long-text">
+                    This project is a redesign of the above chart (diurnal temperature chart).
+                    It is simplified for users who might use the chart to find comfortable temperatures based off the California Energy Model, 2013's definition of comfortable Dry Bulb Temperatures. For my redesign I am focusing on displaying only type of information - dry bulb temperature as a starting point.
+                    <div class="paragraph">
+                        As an architecture student, I have been asked to look at charts such as the Climate Consultant one to get a sense of what the climate is like. To build a low energy building, it is essential to know what the climate is like as passive strategies are dependent on climate. You probably don't want a glass building in the desert no matter how cool it might seem. The chart above is one of the easier charts to understand  yet it still requires other charts to understand or even a whole article to understand what the graph showing. Have you ever seen a <a href="https://sustainabilityworkshop.autodesk.com/buildings/psychrometric-charts">psychometric chart</a>?
+                    </div>
+                </div>
+
+                <div class="header"> Some Basics</div>
+                <div class="body-text long-text">
+                    This prototype is made using D3. It is intented to be usefule for architects, building scientists, architecture student, or anyone who might want to know what a climate is like. It uses the DY library which is used to parse EPW information. It can take in any epw file and display a chart. EPW files can be found at <a href="https://energyplus.net/weather">https://energyplus.net/weather</a>. This an exploratory and experimental project as this was the first time this seminar was taught using D3 as the main graphing tool.
+                </div>
+                <div class="clear"></div>
+
+
+                <div class="header"> Graph Overlays</div>
+                <div class="clear"></div>
+
+                <img src="assets/img/p1ai_Page_3.png" class="diagram">
+                <div class="body-text long-text">
+                    To get a sense of what the climate graphing programs were already doing and to wee what type of information was essential I ran over a couple of exercies of adding overlays over Climate Consultant graphs.
+                </div>
+
+                <img src="assets/img/p1ai_Page_4.png" class="diagram">
+                <div class="body-text long-text">
+                    When I broke it down, what I really wanted to find out was when was it comfortable (based off of their criteria for comfort)? Since essentially, when it's comfortable you don't need to turn on the ac or heater.
+                <div class="paragraph">
+                    HOWEVER, a big issue of just counting the hours of comfort was that you can't tell when it's too hot or too cold. There's another set of information you're missing and you can't correctly describe the climate just by counting hours. Therefore, I wanted to find a mechanism that would tell us:<b> A. When it's not comfortable and B. When it's too hot or too cold and C. By how much</b>.
+                <div class="paragraph">
+                    We don't really need to know the exact temperature (comfort studies themselves are flawed), but the general idea. It might be nice to know the exact temperature, but the most important thing to know is over a year when do we some help to achieve a comfortable temperature.
+                </div>
+                </div>
+                </div>
+
+                <div class="header"> Design Process </div><br>
+                <img src="assets/img/test.png"  class ="diagram">
+                <div class="body-text long-text"> To dive into the comfort data I creaed a series of static graphs in illustrator while creating a more basic version D3. The diagram above is a d3 graph of the "absolute degrees from comfort" and then edits of the graph via Adobe Illustrator to visual how I would like my graph to look in d3. To calculate comfort, a simple function using an if statements for the comfortable temperature range was applied. </div>
+
+                <div class="header"> Early Iteration </div><br>
+                <img src="assets/img/viz2.gif"  class ="diagram">
+                <div class="body-text long-text">
+                    The basic concept for tool is that it would be an online tool where an epw file for the user's desired city would be uploaded and a graph would be displayed showing the climate data. The bar graph on the side indicates how many degrees away from the comfort zone. Each bar represents the average temperature for an hour monthly (for example, all of the 8am temperatures of january are sum in the january 8am bar) that is applied to the comfort formula. Light blue indicates it's too cold and red indicates it's too hot. The line graph to the right of the graph is a graph of the original average temperatures. When the user hover an a bar, a tooltip provides more exact information about how far from comfort, the exact temperature average, and information about what the comfort scale is. When the user clicks on the graph, it reveals the dew point temperature (the green graphs) instead of the dry bulb temperature.
+                </div>
+
+
+                <div class="header"> How to Read Latest Iteration</div><br>
+                <img src="assets/img/read.png"  class ="diagram">
+                <div class="body-text long-text">
+                    Note: You might notice that the bar graph and the median point in the line graph do not match up though they should be the same value. This is likely due to the different plotting and rounding mechanisms for line graphs vs bar charts.
+                </div>
+
+
+                <div class="header"> Example 1</div><br>
+                <div class="body-text">
+                    Fullerton, California; January - March
+                </div>
+                <img src="assets/img/dv1.png"  class ="diagram">
+                <div class="body-text long-text"> The top is a heatmap where you can see the temperature for each day.The more vibrant colors you see the more extreme temperatures. The bottom is a bar graph inverted its side denoting how far away the montlhy average is away from comfort. The longer the bar, the more away from comfort. The side line plot indicates the high and lows and the light gray shading indicates the average temperature ranges calculated under the comfort function to see how faraway that temp really is from comofort.
+                </div>
+                <div class="clear"></div>
+
+                <div class="header"> Example 2</div><br>
+                <div class="body-text">
+                    Phoenix, Arizona; April - June
+                </div>
+                <img src="assets/img/dv2.png"  class ="diagram">
+                <div class="body-text long-text"> Pheonix has some of the hottest temperatures. As you can see there is more red, especially during the day. But during the morning and night in may we can see that its cool and can even be below the comfortable temperature.
+                </div>
+                <div class="clear"></div>
+
+                <div class="header"> Main Take Aways</div>
+                <div class="body-text long-text">
+                    Through this project I learned about the importance of story telling in data. The story of this chart can be read by looking at how every hour of the year is different from the sum.
+                    <div class="paragraph">I'm the type who wants to see important information boiled down to it's simplest form. However, in doing that, you lose a lot of the background information and you lose part of the whole picture. Data visualization is similar because you gain and lose different information through different scales. What do you want to show and what is necessary. In a world where we are constantly simplifying things, what are we missing? I think a better way to go about showing information is using time. A tooltip can give you the little details without obstructing your view of the whole picture.
+                    <div class="paragraph">Another important lessson I learned is that software and coding are essentially tools. Knowing how they function and what you can do is important, but without having an idea of what you want to do with them won't get you very far. Because I knew some coding prior to starting this project, I already knew about the power of functions and applying them to large scale data objects is easy, but just knowing this without a vision of what a plot might look like or without thinking of data visualization techniques from Tufte, I would have a very different visual. </div></div>
+                    </div>
+
+        </div>
+
+        <!-- back to top button -->
+        <div id="back-to-top"><a href="#top">Top</a></div>
+        <!-- footer -->
+        <footer>
+            <div id="footer-items-container">
+                <div class="l-footer">
+                <a href="ui-1.html" class="footer-items">< <b><u>Prev:</b></u> re:birth</a></div>
+            </div>
+
+
+                <div class="r-footer">
+                <a href="arch.html" class="footer-items"><b><u>Next:</b></u> Architecture > </a></div>
+
+            <div class="clear"></div>
+
+
+
+
+        </div>
+    </body>
+</html>
