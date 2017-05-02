@@ -183,9 +183,12 @@ hr {
 }
 
 #projects-section {
+	background-color: #fff;
 }
 
 #contact-section {
+	background-color: #fff;
+
 }
 
 #carousel-section {
@@ -210,6 +213,7 @@ hr {
 	background-color:#fff;
 	height: 100%
 }
+
 
 
 /*toggle stuff*/
