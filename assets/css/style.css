@@ -68,9 +68,9 @@ a:hover {
 	margin: 0px 50px 5px 0px;
     letter-spacing: 2px;
 	color: #395967;s
-	-webkit-box-shadow:0 4px 2px -2px #E0E0E0;
+	/*-webkit-box-shadow:0 4px 2px -2px #E0E0E0;
 	-moz-box-shadow: 0 4px 2px -2px #E0E0E0;
-	box-shadow: 0 4px 2px -2px #E0E0E0;
+	box-shadow: 0 4px 2px -2px #E0E0E0;*/
 	padding: 1px 5px;
 	font-size: 14px;
 	top: 0px; right: 50px;
@@ -78,7 +78,7 @@ a:hover {
 	text-transform: uppercase;
 }
 
-a.nav-items:hover {
+li.nav-items:hover {
 	color: #3E8C6D;
 	font-weight: 700px;
 	border-bottom: 2px solid #3E8C6D;
@@ -178,9 +178,12 @@ hr {
 	top: 50px;
 	width: calc(100% - 50px);
 	position: relative;
+	height: 100%;
 	/*overflow: auto;*/
 
 }
+
+
 
 #projects-section {
 	background-color: #fff;
@@ -238,9 +241,9 @@ hr {
 	transform: rotate(-90deg);
 	color: #395967;
 	border-bottom: 2px solid #3E8C6D;
-	-webkit-box-shadow:0 4px 2px -2px #E0E0E0;
+	/*-webkit-box-shadow:0 4px 2px -2px #E0E0E0;
 	-moz-box-shadow: 0 4px 2px -2px #E0E0E0;
-	box-shadow: 0 4px 2px -2px #E0E0E0;
+	box-shadow: 0 4px 2px -2px #E0E0E0;*/
 	padding: 1px 5px;
 	font-size: 14px;
 
@@ -337,7 +340,7 @@ hr {
 	text-transform: uppercase;
 	font-size: 1.2em;
 	letter-spacing: 2px;
-	text-shadow: 5px 5px 5px rgba(150, 150, 150, 0.5);
+	/*text-shadow: 5px 5px 5px rgba(150, 150, 150, 0.5);*/
 }
 
 
@@ -464,13 +467,14 @@ img.diagram{
 	margin: 0px 0px 10px ;
 	color: #385967;
 	font-weight: 700;
-	text-shadow: 5px 5px 5px rgba(150, 150, 150, 0.5);
+	/*text-shadow: 5px 5px 5px rgba(150, 150, 150, 0.5);*/
 }
 
 
 .content {
 	/*position: relative;*/
 	top: 50px;
+
 }
 
 .front-button {
@@ -516,6 +520,10 @@ img.diagram{
 
 #see-more {
 	background-color: white;
+	left: 50px;
+	top: 50px;
+	width: calc(100% - 50px);
+	position: relative;
 }
 
 #back-to-top{
