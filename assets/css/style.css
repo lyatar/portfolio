@@ -597,7 +597,15 @@ a.footer-items:hover {
 
 }
 
+.icon {
+	width: 30px;
+	padding: 10px;
+	opacity: 0.75;
+}
 
+.icon:hover {
+	opacity: 0.1;
+}
 
 .st0 {
   /*-webkit-animation: dash 3s linear;
