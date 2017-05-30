@@ -643,3 +643,33 @@ a.footer-items:hover {
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
+
+/*for mobile*/
+/*@media only screen and (max-width: 1024px) and (min-width: 320px) {
+	body {
+
+		width: 90%;
+	}
+
+	.caption-text {
+		font-size: 9px;
+	}
+
+
+	.section-container {
+		width: 75%;
+	}
+
+	.diagram {
+		width: 400px;
+	}
+
+	#back-to-top{
+		right: 100px;
+		bottom: 65px;
+	}
+	.left {
+		display: float;
+	}*/
+
+}
