@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twitter as Site Analysis?</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fauna+One|PT+Sans|Playfair+Display" rel="stylesheet">
+    <script src="assets/js/jquery-1.9.1.js"></script>
+    <script src = "assets/js/script2.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+</head>
+<body>
+
+<!-- header and footer -->
+<div id="header">
+    <div id="logo"><a href="index.html">Lauren Yatar</a></div>
+    <div id="navmenu">
+        <ul>
+            <li class="nav-items"><a href="index.html#secondPage">Projects</a></li>
+            <li class="nav-items"><a href="index.html#7thPage">Contact</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- sections -->
+
+<div id="fullpage">
+    <div class="section" id="section1">
+        <div class="title-text"> Can user-generated data be a substitute for site analysis? </div>
+        <div class="body-text">
+            Twitter-sentiment analysis is both qualitative and quantitative. I've spent about a year slowly diving into twitter sentiment analysis from using online sites that showed maps of where tweets were located to learning how to scrap my own twitters and diving into the digital humanities?
+        </div>
+        <div class="paragraph-text">
+            Why? Because I wanted to see what information we could really get and I wanted to see what the data could be used for (also because once upon a time I sat, read, and organized a hundred or so surveys and thought about whether using python would be more efficient (would it even be accurate?)).
+            <br><br>
+            Ultimately, text analysis is best for exploring data sets.
+        </div>
+
+
+    </div>
+<!--
+
+    <div class="section" id="section2">
+            <img src="assets/img/viz.gif"  class ="diagram">
+	</div>
+
+    <div class="section" id="section3">
+
+
+    </div> -->
+</div>
+
+<!-- end of full, page, content start -->
+<div class="content">
+    <img src="assets/img/ta1.png"  class ="diagram">
+    <div class="header-text">
+        Why is data like twitter so interesting? It has a geolocation.
+    </div>
+    <div class="clear">
+    <div class="paragraph-text">
+         In Data-Driven Design and Construction, Randy Deutsch mentions how lots of information is all geo-located. From this information we can gather what type of food people eat, how many people use a certain service, etc. The usefulness of this data is that it is immediate in comparison to the census which comes out every ten years. Though of course, there is a gap in the users as certain types of people use social media versus the census which collects data from people of all walks of life not just those with a smart phone. <br><br>
+
+         It’s important to note that it is important to know the limitations of data and that all of these models of data mining are built with their own biases. Data cannot be the sole driver of the design process in your  project and there must be a middle ground. Therefore these tools must be adapted in a way for you to achieve what you want to achieve.
+    </div>
+
+
+        <div class="header-text">
+            What are some of the Basics for Text Analysis for Social Media?
+        </div>
+        <div class="clear">
+        <div class="paragraph-text">
+             H. Andrew Schwartz and Lyle H. Ungar provide an overview of the current methods of content analysis of social media in Data-Driven Content Analysis of Social Media: A Systematic Overview of Automated Methods (2015). For social scientists, they can work toward two goals: prediction and insight. They claim that “prediction focuses on automatic estimation or measurement of specific psychosocial outcomes from word use” while insight-based studies “use exploratory language analyses to better understand what drives different behavioral pattens, for example, finding topics that distinguish personality factors.” Prediction is usually done using large multivariate regression or support vector machine models while insight is done by repeated univariate or bivariate analyses that are easier to understand (like correlations).  These methods can vary from counting words in a specified word list (lexica) or other methods that generate the lexica or identify keywords that are predictive of a trait.  <br><br>
+             There are both hand-driven and data-driven techniques. Hand-driven techniques tend to be “more accessible, theory-driven, abstract, and able to handle small datasets, while data-driven tend to be more transparent, capture more connections, and are able to yield unexpected associations”. Hand-driven techniques are such as manual dictionaries or crowd-sourced dictionaries which are created by people while a data-driven techniques create dictionaries and topics from the data it’s fed.
+             <br><br>
+             In addition, social media has many limitations such a being a biased sample (not everyone uses social media).  Furthermore, online survey matches can be biased depending on the questions. They also point out that a “deeper problem lies in any data-driven analysis: it discovers correlation, not causality.” This means that data-driven analysis can provide you possible suggestions but you have to also think about the context. The data analysis cannot give you the whole picture.
+             <br><br>
+             Therefore it's important to keep in mind that something may be happening, but it won’t provide the whole picture. It’ s up to the user to discover the cause and to interpret. In terms of techniques, our goal is to provide insight about the site. We will also be using hand-driven methods (dictionaries) for their transparency.
+
+        </div>
+
+
+    <div class="header-text">
+        What can we see from looking at where people tweet?
+    </div>
+    <div class="clear">
+    <img src="assets/img/tweetdiagrams.png"  class ="diagram">
+    <div class="paragraph-text">
+        For this simple analysis I looked at tweets from the same area on two different days. People tend to tweet in the same areas and people were talking about places or food. I took a hand-driven approach in this analysis because the sample was small and hand-labeled all of the topics.
+    </div>
+
+    <div class="header-text">
+        How else can you use twitter data other than using it see what people are talking about? Can you match it to the weather?
+    </div>
+    <div class="clear">
+
+    <div class="paragraph-text">
+        For another text analysis project I matched an extreme weather data base to a set of tweets that all contained the word "weather" to see if people were tweeting more negatively under extreme weather. The full notebook can be found <a href="https://github.com/lyatar/text-analysis-project/blob/master/yatar_finalproject.ipynb">here on github</a>.
+    </div>
+    <img src="assets/img/ta2.png"  class ="diagram">
+
+    <div class="header-text">
+        What can it really tell us? Well, it gives us a good sense of what words our twitter sample uses.
+    </div>
+    <div class="clear">
+<img src="assets/img/ta3.png"  class ="diagram">
+    <div class="paragraph-text">
+        It's a good way to explore what's in our corpus. It can tell us who are users are (assuming they're represented in the sample). A lot of the struggles is finding the corpus and getting a good sample. But also, it doesn't churn out answers. We're the one's who will draw conclusions. We're going to be the ones using it.
+    </div>
+
+
+
+
+    <!-- <div class="header-text">
+        Mood Board
+    </div>
+    <div class="clear">
+
+    <div class="paragraph-text">
+    </div> -->
+
+
+<div class="paragraph-text">
+    <br><br><br>
+</div>
+</div>
+
+<div id="footer-items-container">
+<div class="r-footer">
+    <a href="field-studies.html" class="footer-items"><b><u>Next:</b></u> Field Studies > </a></div>
+</div>
+
+
+</body>
+</html>

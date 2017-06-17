@@ -1,384 +1,159 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Lauren Yatar</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato|Lora|Pt+Sans|Raleway" rel="stylesheet">
-        <script src="assets/js/jquery-1.9.1.js"></script>
-        <script src = "assets/js/script.js"></script>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Hi, my name is Lauren Yatar and I had a passion for design, data, and UX.">
+    <title>Lauren Yatar</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fauna+One|PT+Sans|Playfair+Display" rel="stylesheet">
+    <script src="assets/js/jquery-1.9.1.js"></script>
+    <script src = "assets/js/script.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+</head>
 
-    <body>
-        <!-- Sidebar Icon -->
-        <div class="toggle-container">
-            <div id = "sidebar-button">
-                <a id="nav-toggle"> MENU</a>
-            </div>
-        </div>
 
-        <!-- Sidebar -->
-        <nav class = "sidebar-container">
-            <ul>
-                <div id="close-icon">
-                    <img src="assets/img/close.svg" width="10px"></li></div>
+<body>
+
+<!-- header and footer -->
+<div id="header">
+    <div id="logo"><a href="index.html">Lauren Yatar</a></div>
+    <div id="navmenu">
+        <ul>
+            <li class="nav-items"><a href="index.html#secondPage">Projects</a></li>
+            <li class="nav-items"><a href="index.html#7thPage">Contact</a></li>
+        </ul>
+    </div>
+</div>
+<!-- <div id="footer"></div> -->
+
+<!-- slides -->
+<div id="fullpage">
+    <div class="section active" id="section1">
+        <div class="caption-text">
+                Just some things I've been working on...<br>
                 <br>
 
-                <a href = "index.html">
-                    <li class="sidebar-item">Home</li>
-                    <hr>
-                </a>
-                <li class="sidebar-title">Projects</li>
-                <a href = "ui-1.html">
-                    <li class="sidebar-item">&nbsp&nbsp re:birth</li>
-                </a>
-                <a href = "comfort.html">
-                    <li class="sidebar-item">&nbsp&nbsp How Far From Comfort?</li>
-                </a>
-                <a href = "arch.html">
-                    <li class="sidebar-item">&nbsp&nbsp Architecture</li>
-                </a>
-                <a href = "thesis.html">
-                    <li class="sidebar-item">&nbsp&nbsp Thesis Preview</li>
-                </a>
-                <hr>
-                <a href = "experience.html">
-                    <li class="sidebar-item">Experience</li>
-                </a>
-                <a href = "index.html#aboutme-section">
-                    <li class="sidebar-item">About Lauren</li>
-                </a>
-                <a href = "index.html#contact-section">
-                    <li class="sidebar-item">Contact Lauren</li>
-                </a>
+                <img src="assets/img/down-arrow.svg"  class ="arrow bobbing">
 
-            </ul>
-        </nav>
+        </div>
+	</div>
 
-        <!-- top navigation -->
-        <div id="nav-items-container">
-            <ul>
-                <li class="nav-items"><a href="index.html#projects-section">Projects</a></li>
-                <li class="nav-items"><a href="index.html#contact-section">Contact</a></li>
-            <ul>
+    <div class="section" id="section2">
+        <div class="inner">
+            <div class="title-text">How far from Comfort?</div>
             <div class="clear"></div>
-        </div>
+            <div class="subtitle-text">
+                Building scientists and architects use weather data collected from weather towers to help them in their design decisions and research. This information is readily available as epw files. However as this information is vast, it is important that there are clear methods for visualizing these. Many of the visualization methods make it difficult to fully understand what the graphs are saying. Plus, they aren't the prettiest (which makes it harder to read).
 
-        <!-- Page Wrapper, Consisting of All the Sections -->
-        <!-- contents -->
-
-        <div class="page-wrapper">
-
-            <!-- Carousel Section -->
-            <section class="section" id ="carousel-section">
-                <div id="fronter-container">
-
-                <div id="front-intro">
-                        <?xml version="1.0" encoding="utf-8"?>
-                        <!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="250px"
-                        	 viewBox="0 0 107.6 27.8" style="enable-background:new 0 0 107.6 27.8;" xml:space="preserve">
-                        <style type="text/css">
-                        	.st0{fill:#395967;}
-                        </style>
-                        <path class="st0" d="M8.5,0C8.8,0,9,0.1,9.2,0.2s0.3,0.4,0.3,0.7c0,0.2,0,0.5-0.1,0.9S9.1,2.5,8.9,2.9S8.6,3.7,8.3,4.1
-                        	S7.9,5,7.6,5.4S7.1,6.3,6.8,6.7S6.2,7.5,5.9,7.8c-0.6,0.7-1,1.3-1.5,1.8s-0.8,0.9-1.1,1.2s-0.5,0.6-0.8,0.8S2.3,12,2.1,12.1
-                        	s-0.3,0.3-0.4,0.4s-0.3,0.3-0.4,0.4c-0.1,0.3-0.1,0.6-0.1,0.8s0,0.5,0,0.7c0,0.7,0.1,1.2,0.3,1.5s0.5,0.5,0.9,0.5
-                        	c0.3,0,0.5-0.1,0.8-0.2s0.5-0.3,0.8-0.5s0.5-0.5,0.8-0.7s0.5-0.6,0.7-0.8s0.4-0.6,0.6-0.8s0.3-0.5,0.5-0.7L7.1,13
-                        	c0,0-0.1,0.2-0.2,0.4s-0.3,0.5-0.5,0.8s-0.5,0.6-0.8,1s-0.6,0.7-0.9,1s-0.7,0.5-1.1,0.7s-0.7,0.3-1.1,0.3c-0.3,0-0.6-0.1-0.9-0.2
-                        	S1,16.6,0.7,16.4s-0.4-0.6-0.5-1S0,14.5,0,13.9c0-0.7,0.1-1.5,0.3-2.2s0.4-1.6,0.7-2.3S1.6,7.8,2,7s0.8-1.5,1.2-2.2s0.9-1.3,1.4-1.9
-                        	s1-1.1,1.4-1.5s0.9-0.8,1.3-1S8.2,0,8.5,0z M1.5,11.9c0.7-0.7,1.3-1.4,1.9-2.1s1.2-1.4,1.7-2.1s1-1.4,1.5-2s0.8-1.3,1.2-1.8
-                        	s0.6-1.1,0.8-1.6S8.8,1.4,8.8,1c0-0.1,0-0.1-0.1-0.3S8.6,0.6,8.5,0.6c-0.2,0-0.6,0.2-1,0.5S6.7,1.8,6.3,2.4S5.3,3.6,4.8,4.3
-                        	s-1,1.5-1.4,2.4S2.6,8.4,2.3,9.3S1.7,11,1.5,11.9z"/>
-                        <path class="st0" d="M15.9,9.3c-0.1,0.2-0.2,0.5-0.4,0.8s-0.4,0.7-0.6,1.1s-0.4,0.8-0.6,1.2s-0.4,0.8-0.6,1.3s-0.3,0.8-0.4,1.2
-                        	s-0.2,0.7-0.2,0.9s0,0.4,0.1,0.5s0.2,0.1,0.4,0.1c0.2,0,0.5-0.1,0.7-0.2s0.5-0.3,0.7-0.5s0.5-0.4,0.7-0.7s0.4-0.5,0.6-0.8
-                        	s0.4-0.5,0.5-0.8s0.3-0.5,0.4-0.6l0.4,0.3c-0.1,0.2-0.3,0.5-0.5,0.8s-0.4,0.6-0.6,0.9s-0.4,0.6-0.7,0.8s-0.5,0.5-0.8,0.7
-                        	s-0.6,0.4-0.9,0.5S13.6,17,13.3,17c-0.5,0-0.8-0.1-1-0.4s-0.3-0.6-0.3-1.1c0,0,0-0.1,0-0.2s0-0.2,0-0.3c-0.4,0.5-0.8,0.9-1.1,1.2
-                        	s-0.7,0.6-1,0.8s-0.7,0.3-1,0.4S8.2,17.5,8,17.5c-0.3,0-0.6,0-0.8-0.1s-0.5-0.2-0.7-0.4S6.1,16.5,6,16.2s-0.2-0.6-0.2-0.9
-                        	c0-0.4,0.1-1,0.3-1.5s0.6-1.2,1.1-1.9c0.4-0.6,0.9-1.1,1.3-1.4s0.9-0.7,1.4-0.9s0.9-0.4,1.3-0.5s0.8-0.2,1.1-0.2
-                        	c0.7,0,1.3,0.1,1.6,0.4s0.6,0.6,0.7,1.1c0.2-0.2,0.3-0.4,0.5-0.6s0.3-0.4,0.5-0.6L15.9,9.3z M12.3,13.7c0.1-0.2,0.2-0.4,0.4-0.6
-                        	s0.3-0.5,0.5-0.8s0.3-0.5,0.5-0.8s0.3-0.5,0.4-0.6c0-0.1,0-0.2,0-0.3s-0.1-0.3-0.2-0.5s-0.2-0.3-0.4-0.4S13,9.5,12.7,9.5
-                        	c-0.2,0-0.5,0-0.8,0.1s-0.6,0.2-1,0.4s-0.7,0.4-1,0.7s-0.7,0.6-1.1,1.1c-0.5,0.6-1,1.3-1.2,2s-0.4,1.2-0.4,1.8c0,0.4,0.1,0.8,0.3,1
-                        	s0.5,0.4,0.9,0.4c0.4,0,0.8-0.1,1.2-0.3s0.7-0.4,1.1-0.7s0.6-0.6,0.9-1S12.1,14.1,12.3,13.7z"/>
-                        <path class="st0" d="M22.7,14.5c-0.4,0.4-0.7,0.8-1.1,1.2s-0.7,0.7-1,0.9s-0.7,0.5-1,0.6s-0.7,0.2-1,0.2c-0.3,0-0.6-0.1-0.8-0.2
-                        	s-0.4-0.3-0.6-0.4s-0.3-0.4-0.4-0.7s-0.1-0.6-0.1-0.9c0-0.5,0.1-1.1,0.4-1.7s0.5-1.1,0.9-1.7s0.8-1.1,1.2-1.5s0.9-0.9,1.3-1.3
-                        	l0.5,0.4c-0.3,0.4-0.6,0.9-0.9,1.4s-0.7,1.1-1,1.6s-0.6,1.1-0.8,1.7s-0.3,1.1-0.3,1.6c0,0.3,0.1,0.6,0.2,0.8s0.4,0.3,0.7,0.3
-                        	c0.4,0,0.8-0.1,1.2-0.4s0.9-0.7,1.4-1.2s0.9-1,1.4-1.6s0.9-1.2,1.3-1.8s0.8-1.2,1.2-1.7s0.6-1,0.8-1.4L26.8,9
-                        	c-0.5,0.9-0.9,1.7-1.3,2.5s-0.8,1.5-1.1,2.1s-0.6,1.1-0.8,1.6s-0.3,0.8-0.3,1.1c0,0.1,0,0.2,0.1,0.3s0.1,0.1,0.2,0.1
-                        	c0.3,0,0.6-0.1,1-0.4s0.7-0.6,1.1-1s0.7-0.8,1-1.3s0.6-0.9,0.9-1.3l0.4,0.3c0,0.1-0.1,0.2-0.3,0.5s-0.3,0.5-0.6,0.8s-0.5,0.6-0.8,1
-                        	s-0.6,0.7-0.9,0.9s-0.6,0.5-1,0.7s-0.7,0.3-1,0.3c-0.2,0-0.4,0-0.5-0.1s-0.3-0.2-0.4-0.3s-0.2-0.3-0.3-0.4s-0.1-0.3-0.1-0.5
-                        	c0-0.2,0-0.4,0.1-0.7S22.6,14.8,22.7,14.5z"/>
-                        <path class="st0" d="M35,13c-0.1,0.2-0.3,0.4-0.4,0.7s-0.3,0.6-0.6,0.9s-0.4,0.7-0.7,1s-0.5,0.7-0.8,0.9s-0.6,0.5-1,0.7
-                        	s-0.7,0.3-1.1,0.3c-0.2,0-0.4,0-0.6-0.1s-0.4-0.2-0.5-0.3s-0.3-0.3-0.4-0.5s-0.1-0.5-0.1-0.7c0-0.4,0.1-0.8,0.2-1.2s0.3-0.8,0.5-1.2
-                        	s0.4-0.7,0.6-1.1s0.4-0.6,0.4-0.8s0.1-0.4,0.1-0.5c0-0.1,0-0.2-0.1-0.3s-0.1-0.2-0.2-0.2s-0.2-0.2-0.3-0.2s-0.2-0.2-0.3-0.3
-                        	c-0.2,0.3-0.4,0.6-0.6,0.9c-0.2,0.3-0.4,0.6-0.6,0.9s-0.4,0.7-0.6,1l-0.4-0.3l2.5-3.9l0.3,0.2c0,0,0,0.1-0.1,0.2s-0.1,0.2-0.1,0.3
-                        	c0,0.1,0,0.2,0,0.3s0.1,0.2,0.2,0.2c0.3,0.3,0.6,0.5,0.7,0.7s0.3,0.3,0.4,0.4s0.1,0.2,0.2,0.2s0,0.1,0,0.2s0,0.2,0,0.3
-                        	s-0.1,0.3-0.2,0.5s-0.2,0.4-0.3,0.7s-0.3,0.5-0.5,0.9c-0.1,0.2-0.2,0.4-0.3,0.6s-0.2,0.4-0.3,0.6s-0.2,0.4-0.2,0.6s-0.1,0.4-0.1,0.6
-                        	c0,0.1,0,0.3,0.1,0.4s0.1,0.2,0.2,0.2s0.1,0.1,0.2,0.1s0.2,0,0.2,0c0.3,0,0.5-0.1,0.8-0.2s0.5-0.3,0.8-0.6s0.5-0.5,0.7-0.8
-                        	s0.5-0.6,0.7-0.9s0.4-0.6,0.6-0.9s0.3-0.5,0.5-0.8L35,13z"/>
-                        <path class="st0" d="M35.5,14.4c0,0.1,0,0.2,0,0.3s0,0.2,0,0.3c0,0.3,0,0.5,0.1,0.8s0.2,0.5,0.4,0.7s0.4,0.3,0.6,0.5S37,17,37.3,17
-                        	c1,0,2-0.3,3-1s1.9-1.8,2.8-3.3l0.4,0.4c-0.5,0.9-1,1.6-1.6,2.2s-1.1,1.1-1.6,1.4s-1,0.6-1.6,0.8s-1,0.2-1.5,0.2
-                        	c-0.3,0-0.7,0-1.1-0.1s-0.7-0.2-1-0.5s-0.6-0.5-0.8-0.9s-0.3-0.8-0.3-1.4c0-0.6,0.1-1.2,0.3-1.7s0.5-1,0.8-1.5s0.7-0.9,1.1-1.3
-                        	s0.8-0.7,1.3-1s0.8-0.5,1.2-0.6s0.8-0.2,1.1-0.2c0.2,0,0.4,0,0.6,0.1s0.4,0.2,0.6,0.3s0.3,0.3,0.4,0.5s0.2,0.5,0.2,0.8
-                        	c0,0.4-0.1,0.8-0.3,1.2s-0.4,0.7-0.8,1s-0.7,0.6-1.1,0.8s-0.9,0.5-1.3,0.6s-0.9,0.3-1.4,0.4S35.9,14.4,35.5,14.4z M35.6,13.9
-                        	c0.5-0.1,1-0.2,1.5-0.3s0.9-0.4,1.3-0.6s0.7-0.5,1-0.8s0.6-0.6,0.8-0.9s0.4-0.6,0.5-0.8s0.2-0.5,0.2-0.7s-0.1-0.4-0.2-0.5
-                        	s-0.2-0.2-0.4-0.2c-0.3,0-0.7,0.1-1.2,0.4s-0.9,0.6-1.3,1s-0.8,0.9-1.2,1.5S35.8,13.2,35.6,13.9z"/>
-                        <path class="st0" d="M52.9,11c0,0.3-0.1,0.7-0.2,1s-0.3,0.7-0.4,1s-0.4,0.7-0.6,1s-0.4,0.7-0.6,1s-0.3,0.6-0.4,0.9s-0.2,0.5-0.2,0.8
-                        	c0,0.2,0,0.3,0.1,0.4s0.2,0.1,0.3,0.1c0.3,0,0.6-0.1,1-0.4s0.7-0.7,1.1-1.1s0.8-0.9,1.1-1.5s0.7-1,1-1.5l0.4,0.3
-                        	c-0.1,0.1-0.2,0.3-0.3,0.6s-0.4,0.6-0.6,0.9s-0.5,0.7-0.8,1.1s-0.6,0.7-1,1.1s-0.7,0.6-1.1,0.8s-0.7,0.3-1.1,0.3
-                        	c-0.2,0-0.4,0-0.6-0.1s-0.3-0.2-0.4-0.3s-0.2-0.3-0.3-0.4s-0.1-0.3-0.1-0.5c0-0.3,0.1-0.6,0.2-1s0.3-0.7,0.5-1.1s0.4-0.8,0.7-1.1
-                        	s0.5-0.7,0.7-1.1s0.4-0.7,0.5-1s0.2-0.5,0.2-0.8c0-0.2-0.1-0.4-0.2-0.6s-0.3-0.2-0.5-0.2c-0.2,0-0.5,0.1-0.9,0.3s-0.7,0.5-1.1,0.9
-                        	s-0.8,0.9-1.3,1.5s-1,1.2-1.6,2c-0.3,0.4-0.6,0.8-0.9,1.2c-0.1,0.2-0.3,0.3-0.4,0.5s-0.3,0.4-0.4,0.5s-0.3,0.3-0.4,0.5
-                        	s-0.2,0.3-0.3,0.4l-1-0.4l1.4-1.9c0.2-0.3,0.4-0.6,0.6-0.9s0.4-0.6,0.6-0.9s0.4-0.7,0.6-1s0.3-0.6,0.5-1c0.2-0.5,0.4-0.9,0.5-1.2
-                        	s0.1-0.6,0.1-0.7c0-0.2,0-0.3-0.1-0.4S47,9,46.8,9c-0.1,0-0.3,0.1-0.5,0.2s-0.4,0.3-0.6,0.6s-0.4,0.5-0.6,0.8s-0.4,0.6-0.6,0.9
-                        	s-0.4,0.6-0.5,0.8s-0.3,0.5-0.4,0.6l-0.4-0.3c0.4-0.6,0.8-1.2,1.1-1.7s0.6-1,0.9-1.3S45.8,9,46,8.7s0.6-0.3,0.9-0.3
-                        	c0.2,0,0.3,0,0.5,0.1s0.3,0.2,0.4,0.3s0.2,0.3,0.3,0.5s0.1,0.4,0.1,0.7c0,0.2,0,0.4-0.1,0.6c0.3-0.3,0.7-0.6,1-0.8s0.6-0.4,0.8-0.5
-                        	s0.5-0.2,0.7-0.3S51.1,9,51.2,9c0.1,0,0.3,0,0.5,0.1s0.4,0.2,0.6,0.3s0.3,0.4,0.4,0.6S52.9,10.6,52.9,11z"/>
-                        <path class="st0" d="M67.4,14.4c-0.3,0.3-0.6,0.6-0.9,0.9s-0.6,0.5-0.9,0.7s-0.6,0.4-0.9,0.5s-0.6,0.2-0.8,0.2
-                        	c-0.3,0-0.6-0.1-0.8-0.2s-0.5-0.3-0.6-0.5s-0.3-0.5-0.4-0.8s-0.1-0.6-0.1-1c0-0.5,0.1-1,0.3-1.5s0.4-1,0.8-1.5s0.7-0.9,1-1.4
-                        	S64.6,9.3,65,9l0.5,0.4c-0.1,0.1-0.2,0.3-0.4,0.6s-0.3,0.5-0.5,0.8s-0.4,0.6-0.6,1s-0.4,0.7-0.5,1.1s-0.3,0.8-0.4,1.1S63,14.7,63,15
-                        	c0,0.2,0,0.3,0,0.5s0.1,0.3,0.1,0.4s0.2,0.2,0.3,0.3s0.2,0.1,0.4,0.1c0.3,0,0.6-0.1,0.9-0.3s0.7-0.4,1-0.7s0.7-0.6,1.1-1
-                        	s0.7-0.8,1.1-1.3s0.7-0.9,1-1.4s0.6-0.9,0.9-1.4c0.2-0.4,0.5-0.8,0.8-1.2s0.5-0.8,0.8-1.2L71.9,8c0,0-0.1,0.2-0.2,0.4
-                        	s-0.3,0.7-0.5,1.1s-0.5,1-0.8,1.6s-0.6,1.3-1,2s-0.7,1.4-1,2.2s-0.7,1.4-1,2.1c1.1-0.6,2.1-1.3,3-2.2s1.7-1.7,2.3-2.6L73,13
-                        	c-0.7,1-1.5,2-2.5,2.9s-2.2,1.7-3.6,2.5c-0.6,1.4-1.3,2.7-1.9,3.8s-1.2,2.1-1.9,3s-1.2,1.5-1.9,1.9s-1.3,0.7-1.9,0.7
-                        	c-0.4,0-0.8-0.1-1.1-0.4s-0.4-0.7-0.4-1.2c0-0.4,0.1-0.9,0.3-1.3s0.5-0.9,0.8-1.4s0.8-0.9,1.2-1.4s1-0.9,1.5-1.3s1.1-0.8,1.8-1.2
-                        	s1.2-0.7,1.9-1.1c0.2-0.3,0.3-0.7,0.5-1.1s0.4-0.7,0.6-1.1s0.4-0.7,0.5-1S67.3,14.6,67.4,14.4z M64.8,19.6c-0.9,0.6-1.7,1.1-2.5,1.8
-                        	s-1.4,1.2-2,1.9s-1,1.2-1.3,1.7s-0.5,1-0.5,1.4c0,0.2,0.1,0.4,0.2,0.6s0.3,0.2,0.6,0.2c0.3,0,0.6-0.1,0.9-0.3s0.6-0.5,1-0.8
-                        	s0.6-0.8,1-1.3s0.6-1,0.9-1.6s0.6-1.1,0.9-1.7S64.6,20.2,64.8,19.6z"/>
-                        <path class="st0" d="M81.9,9.3c-0.1,0.2-0.2,0.5-0.4,0.8s-0.4,0.7-0.6,1.1s-0.4,0.8-0.6,1.2s-0.4,0.8-0.6,1.3s-0.3,0.8-0.4,1.2
-                        	s-0.2,0.7-0.2,0.9s0,0.4,0.1,0.5s0.2,0.1,0.4,0.1c0.2,0,0.5-0.1,0.7-0.2s0.5-0.3,0.7-0.5s0.5-0.4,0.7-0.7s0.4-0.5,0.6-0.8
-                        	s0.4-0.5,0.5-0.8s0.3-0.5,0.4-0.6l0.4,0.3c-0.1,0.2-0.3,0.5-0.5,0.8s-0.4,0.6-0.6,0.9s-0.4,0.6-0.7,0.8s-0.5,0.5-0.8,0.7
-                        	s-0.6,0.4-0.9,0.5S79.6,17,79.3,17c-0.5,0-0.8-0.1-1-0.4s-0.3-0.6-0.3-1.1c0,0,0-0.1,0-0.2s0-0.2,0-0.3c-0.4,0.5-0.8,0.9-1.1,1.2
-                        	s-0.7,0.6-1,0.8s-0.7,0.3-1,0.4s-0.6,0.1-0.9,0.1c-0.3,0-0.6,0-0.8-0.1s-0.5-0.2-0.7-0.4s-0.4-0.4-0.5-0.7s-0.2-0.6-0.2-0.9
-                        	c0-0.4,0.1-1,0.3-1.5s0.6-1.2,1.1-1.9c0.4-0.6,0.9-1.1,1.3-1.4s0.9-0.7,1.4-0.9s0.9-0.4,1.3-0.5s0.8-0.2,1.1-0.2
-                        	c0.7,0,1.3,0.1,1.6,0.4s0.6,0.6,0.7,1.1c0.2-0.2,0.3-0.4,0.5-0.6s0.3-0.4,0.5-0.6L81.9,9.3z M78.3,13.7c0.1-0.2,0.2-0.4,0.4-0.6
-                        	s0.3-0.5,0.5-0.8s0.3-0.5,0.5-0.8s0.3-0.5,0.4-0.6c0-0.1,0-0.2,0-0.3s-0.1-0.3-0.2-0.5s-0.2-0.3-0.4-0.4S79,9.5,78.7,9.5
-                        	c-0.2,0-0.5,0-0.8,0.1s-0.6,0.2-1,0.4s-0.7,0.4-1,0.7s-0.7,0.6-1.1,1.1c-0.5,0.6-1,1.3-1.2,2s-0.4,1.2-0.4,1.8c0,0.4,0.1,0.8,0.3,1
-                        	s0.5,0.4,0.9,0.4c0.4,0,0.8-0.1,1.2-0.3s0.7-0.4,1.1-0.7s0.6-0.6,0.9-1S78,14.1,78.3,13.7z"/>
-                        <path class="st0" d="M85.6,7.4C85.7,7.2,85.8,7,86,6.7s0.4-0.7,0.7-1.1s0.6-0.8,0.9-1.2s0.6-0.7,0.9-1l0.5,0.3
-                        	c-0.3,0.6-0.7,1.1-1,1.8s-0.7,1.3-1,1.9h3.8L90.6,8h-3.9c-0.4,0.7-0.7,1.4-1,2.1s-0.6,1.4-0.8,2s-0.4,1.2-0.6,1.8s-0.2,1-0.2,1.4
-                        	c0,0.5,0.1,0.9,0.4,1.1s0.5,0.3,0.9,0.3c0.3,0,0.6-0.1,0.9-0.3s0.6-0.4,0.9-0.7s0.6-0.6,0.9-0.9s0.5-0.7,0.7-0.9s0.4-0.6,0.5-0.8
-                        	s0.2-0.4,0.3-0.4L90,13c-0.3,0.5-0.6,0.9-0.9,1.4s-0.7,1-1.1,1.4s-0.9,0.8-1.4,1.1s-1,0.4-1.6,0.4c-0.4,0-0.7-0.1-0.9-0.2
-                        	s-0.5-0.3-0.7-0.5s-0.3-0.5-0.4-0.8s-0.1-0.6-0.1-1c0-0.2,0-0.6,0.1-1s0.2-0.9,0.4-1.5s0.4-1.3,0.7-2s0.7-1.5,1.1-2.4h-1.9l0.2-0.6
-                        	H85.6z"/>
-                        <path class="st0" d="M98.9,9.3c-0.1,0.2-0.2,0.5-0.4,0.8s-0.4,0.7-0.6,1.1s-0.4,0.8-0.6,1.2s-0.4,0.8-0.6,1.3s-0.3,0.8-0.4,1.2
-                        	s-0.2,0.7-0.2,0.9s0,0.4,0.1,0.5s0.2,0.1,0.4,0.1c0.2,0,0.5-0.1,0.7-0.2s0.5-0.3,0.7-0.5s0.5-0.4,0.7-0.7s0.4-0.5,0.6-0.8
-                        	s0.4-0.5,0.5-0.8s0.3-0.5,0.4-0.6l0.4,0.3c-0.1,0.2-0.3,0.5-0.5,0.8s-0.4,0.6-0.6,0.9s-0.4,0.6-0.7,0.8s-0.5,0.5-0.8,0.7
-                        	s-0.6,0.4-0.9,0.5S96.6,17,96.3,17c-0.5,0-0.8-0.1-1-0.4s-0.3-0.6-0.3-1.1c0,0,0-0.1,0-0.2s0-0.2,0-0.3c-0.4,0.5-0.8,0.9-1.1,1.2
-                        	s-0.7,0.6-1,0.8s-0.7,0.3-1,0.4s-0.6,0.1-0.9,0.1c-0.3,0-0.6,0-0.8-0.1s-0.5-0.2-0.7-0.4s-0.4-0.4-0.5-0.7s-0.2-0.6-0.2-0.9
-                        	c0-0.4,0.1-1,0.3-1.5s0.6-1.2,1.1-1.9c0.4-0.6,0.9-1.1,1.3-1.4s0.9-0.7,1.4-0.9s0.9-0.4,1.3-0.5s0.8-0.2,1.1-0.2
-                        	c0.7,0,1.3,0.1,1.6,0.4s0.6,0.6,0.7,1.1c0.2-0.2,0.3-0.4,0.5-0.6s0.3-0.4,0.5-0.6L98.9,9.3z M95.3,13.7c0.1-0.2,0.2-0.4,0.4-0.6
-                        	s0.3-0.5,0.5-0.8s0.3-0.5,0.5-0.8s0.3-0.5,0.4-0.6c0-0.1,0-0.2,0-0.3s-0.1-0.3-0.2-0.5s-0.2-0.3-0.4-0.4S96,9.5,95.7,9.5
-                        	c-0.2,0-0.5,0-0.8,0.1s-0.6,0.2-1,0.4s-0.7,0.4-1,0.7s-0.7,0.6-1.1,1.1c-0.5,0.6-1,1.3-1.2,2s-0.4,1.2-0.4,1.8c0,0.4,0.1,0.8,0.3,1
-                        	s0.5,0.4,0.9,0.4c0.4,0,0.8-0.1,1.2-0.3s0.7-0.4,1.1-0.7s0.6-0.6,0.9-1S95.1,14.1,95.3,13.7z"/>
-                        <path class="st0" d="M107.6,13c-0.1,0.2-0.3,0.4-0.4,0.7s-0.3,0.6-0.6,0.9s-0.4,0.7-0.7,1s-0.5,0.7-0.8,0.9s-0.6,0.5-1,0.7
-                        	s-0.7,0.3-1.1,0.3c-0.2,0-0.4,0-0.6-0.1s-0.4-0.2-0.5-0.3s-0.3-0.3-0.4-0.5s-0.1-0.5-0.1-0.7c0-0.4,0.1-0.8,0.2-1.2s0.3-0.8,0.5-1.2
-                        	s0.4-0.7,0.6-1.1s0.4-0.6,0.4-0.8s0.1-0.4,0.1-0.5c0-0.1,0-0.2-0.1-0.3s-0.1-0.2-0.2-0.2s-0.2-0.2-0.3-0.2s-0.2-0.2-0.3-0.3
-                        	c-0.2,0.3-0.4,0.6-0.6,0.9c-0.2,0.3-0.4,0.6-0.6,0.9s-0.4,0.7-0.6,1l-0.4-0.3l2.5-3.9l0.3,0.2c0,0,0,0.1-0.1,0.2s-0.1,0.2-0.1,0.3
-                        	c0,0.1,0,0.2,0,0.3s0.1,0.2,0.2,0.2c0.3,0.3,0.6,0.5,0.7,0.7s0.3,0.3,0.4,0.4s0.1,0.2,0.2,0.2s0,0.1,0,0.2s0,0.2,0,0.3
-                        	s-0.1,0.3-0.2,0.5s-0.2,0.4-0.3,0.7s-0.3,0.5-0.5,0.9c-0.1,0.2-0.2,0.4-0.3,0.6s-0.2,0.4-0.3,0.6s-0.2,0.4-0.2,0.6s-0.1,0.4-0.1,0.6
-                        	c0,0.1,0,0.3,0.1,0.4s0.1,0.2,0.2,0.2s0.1,0.1,0.2,0.1s0.2,0,0.2,0c0.3,0,0.5-0.1,0.8-0.2s0.5-0.3,0.8-0.6s0.5-0.5,0.7-0.8
-                        	s0.5-0.6,0.7-0.9s0.4-0.6,0.6-0.9s0.3-0.5,0.5-0.8L107.6,13z"/>
-                        </svg>
-
-
-
-                    <div class="front-img">
-                    <img src="assets/img/front.png">
-                    </div>
-                    <div class="caption-text">
-                        Hi, my name is <b>Lauren Yatar</b> and I’m a Masters of Architecture student<br> at UC Berkeley with a passion for <em>design, data,</em> and <em>UI/UX</em>.<br>
-                        I like simple things with a quirky little <em>punch</em>.
-                    </div>
-                    <a href="#projects-section"><div class="front-button">See my projects below!</div></a>
-                </div>
-                </div>
-
-            </section>
-
-<!-- start of projects -->
-            <section id="projects-section"></section>
-            <!-- design section -->
-
-            <section class ="section" id ="design-section">
-                    <div class="section-container">
-                        <div class="title-text">re:birth</div>
-                        <div class="tag">Design</div>
-                        <div class="tag">UI/UX</div>
-                        <div class="tag">Info C265: Interface Aesthetics</div>
-
-                    <div class="item-container">
-                        <div class="clear"></div>
-                        <div class="left">
-                            <div class="content">
-                                <img src="assets/img/prototype.jpg"  class ="main-img">
-                            </div>
-                        </div>
-
-                    <div class="right">
-                        <div class="content">
-                            <div class="header"> The Goal </div>
-                            <div class="caption-text"> Design a wearable and a matching app to track stress and turn stress into something <b><i>positive.</b></i></div>
-                            <div class="clear"></div>
-
-                            <div class="header"> The Problem</div>
-                            <div class="caption-text"> Wearables are seen as being kind of nerdy. They don't attract people who aren't into tech or health. </div>
-                            <div class="clear"></div>
-                            <div class="big-button">
-                                <a href="ui-1.html">SEE MORE</a>
-                        </div>
-                    </div>
-                </div>
-            </div></div>
-            </section>
-
-            <!-- data section -->
-
-            <section class ="section" id ="data-section">
-                    <div class="section-container">
-                        <div class="title-text">How Far From Comfort?</div>
-                        <div class="tag"> Data </div>
-                        <div class="tag"> ARCH 229: Data Vizualization for Building Simulations </div>
-
-                        <div class="item-container">
-                        <div class="clear"></div>
-
-                        <div class="left">
-                        <div class="content">
-                            <img src="assets/img/data.png"  class ="main-img">
-                        </div>
-                        </div>
-
-
-                        <div class="right">
-                        <div class="content">
-                            <div class="header"> The Goal </div>
-                            <div class="caption-text"> Redesign climate charts to be more understandable and visually appealing to users. </div>
-                            <div class="clear"></div>
-
-                            <div class="header"> Additionals</div>
-                            <div class="caption-text"> How might interactivity change how we show information? What information do we gain and what information do we lose?</div>
-                            <div class="clear"></div>
-                            <div class="big-button">
-                                <a href="comfort.html">SEE MORE</a>
-                            </div>
-                    </div>
-                </div>
+            </div>
+            <div class="big-button">
+                <a href="comfort.html">SEE MORE</a>
             </div>
         </div>
-            </section>
+        <div class="inner">
+            <img data-src="assets/img/c.png" class ="main-img">
+        </div>
+    </div>
 
-
-
-    <!-- arch section -->
-    <section class ="section" id ="arch-section">
-        <div class ="text" id ="arch-text"></div>
-            <div class="section-container">
-            <div class="title-text">Architecture</div>
-            <div class="tag"> Arch </div>
-            <div class="tag"> Various Projects </div>
-
-            <div class="item-container">
+    <div class="section" id="section3">
+        <div class="inner">
+            <div class="title-text">re:birth</div>
             <div class="clear"></div>
-                    <div class="left">
-                        <div class="content">
-
-                            <img src="assets/img/arch203a.png"  class ="main-img">
-                        </div>
-                    </div>
-
-
-                    <div class="right">
-                        <div class="content">
-                        <div class="header"> About the Work </div>
-                        <div class="caption-text"> From abstract forms to more abstract forms, to odes to blocks and minimalism, a bag of me trying to discover many different things and learning about what elements might make up a building. </div>
-                        <div class="clear"></div>
-
-
-                        <div class="big-button">
-                            <a href="arch.html">SEE MORE</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="subtitle-text">
+                People who are stressed use stress wearables to track their stress, but many of these are seen as being kind of nerdy and are highly obvious. They don't attract people who aren't into tech or health. My mission was to design both a wearable and a matching UI that would turn stress into something positive. Can you re:set your stress levels?
+            </div>
+            <div class="big-button">
+                <a href="rebirth.html">SEE MORE</a>
             </div>
         </div>
-    </section>
-
-
-    <!-- contact-->
-<section id="aboutme-section"></section>
-<section class = "section" id = "about-section">
-       <div class = "text" id = "about-text">
-                <div class= "section-container item-container">
-                <div class="left">
-                   <div class="content">
-                    <div class="header">About Me</div>
-                        <div class="caption-text small-text paragraph">The picture on the right inspired me to study architecture. As I look back, what I was drawn to the most was the atmosphere and the sense of "ma" evoked in the picture. <div class="paragraph">My first introduction to "design" was through an elective course I took during my undergrad titled "Human Factors for the Web" (before I took any architecture courses). It was through that course I learned to think about stakeholders, user-testing, and type and color. I didn't realize how much of an influence that one elective course had on my life until I began to reflect on what my interests really are and what I really want to do.
-                        </div> <div class="paragraph">As a designer, my goal is to create visually appealing and easy to use products that also tell a story. Products that express more than just its physical make up. </div></div>
-
-                   </div>
-               </div>
-
-               <div class="right">
-                   <div class="content">
-                       <br><br>
-                       <img src="assets/img/nazara-facebook.jpg" width="400px"><br>
-                       Modern Japanese Architecture and Ma
-                       <a href="http://ii-ne-kore.blogspot.com/2009/09/modern-japanese-architecture-and-ma.html">[Source]</a>
-
-               </div>
-               </div>
-
-            </div>
-
-        </section>
-
-
-         <!-- contact-->
-    <section id="contact-section"></section>
-     <section class = "section" id = "about-section">
-            <div class = "text" id = "about-text">
-                     <div class= "section-container">
-                    <div class="title-text">Contact</div>
-                    <div class="left">
-                        <div class="content">
-                            <br>
-                            <img src="assets/img/arch.svg" width="300px" border-radius="5px">
-                        </div>
-                    </div>
-
-                    <div class="right">
-
-                            <div class="content">
-                                <br><br>
-                                <div class="header">Like what you see?</div>
-                                <div class="caption-text">
-
-                                Contact me (Lauren Yatar) at<br><i><b> yatar.lauren[at]gmail.com</b></i></div>
-                                <a href="mailto:yatar.lauren@gmail.com">
-                                    <img src="assets/img/close-envelope.svg" class="icon" alt="email">
-                                </a>
-                                <a href="https://www.linkedin.com/in/lauren-yatar/">
-                                <img src="assets/img/linked-in-square-button.svg" class="icon" alt="linkedin">
-                            </a>
-                                <a href="https://github.com/lyatar">
-                                <img src="assets/img/github-logo.svg" class="icon" alt="github">
-                            </a>
-
-                    </div>
-
-                 </div>
-
-             </section>
-
+        <div class="inner">
+            <img data-src="assets/img/test3.png"  class ="main-img">
+        </div>
     </div>
 
 
 
-        <!-- back to top button -->
+    <div class="section" id="section4">
+        <div class="inner">
+            <div class="title-text">A Substitute for Site Analysis?</div>
+            <div class="clear"></div>
+            <div class="subtitle-text">
+                Can user-generated data such as Twitter be used as a substitute for site analysis? Questions aren't prompted and what's being tweeted is constantly changing. It's more up-to-date than a census, but it's not the whole community? The quick answer, no it can't be a substitute, but it can tell something else.
+            </div>
+            <div class="big-button">
+                <a href="twitter.html">SEE MORE</a>
+            </div>
+        </div>
+        <div class="inner">
+            <img data-src="assets/img/map.png"  class ="main-img">
+        </div>
+    </div>
 
-        <div id="back-to-top"><a href="#top">Top</a></div>
-    </body>
+    <div class="section" id="section5">
+        <div class="inner">
+            <div class="title-text">Field Studies</div>
+            <div class="clear"></div>
+            <div class="subtitle-text">
+                How do architects work with clients? How is it similar to human-centered design concepts? Let me explain one frame work of design research I'm familiar with.
+
+
+            </div>
+            <div class="clear"></div>
+            <div class="big-button">
+                <a href="field-studies.html">SEE MORE</a>
+            </div>
+        </div>
+        <div class="inner">
+            <img data-src="assets/img/5.png"  class ="main-img">
+        </div>
+    </div>
+
+    <div class="section" id="section6">
+        <div class="inner">
+            <div class="title-text">New Project</div>
+            <div class="clear"></div>
+            <div class="subtitle-text">
+                COMING SOON?
+            </div>
+            <div class="clear"></div>
+            <div class="big-button">
+                <a href="#">SEE MORE</a>
+            </div>
+        </div>
+        <div class="inner">
+            <!-- <img data-src="assets/img/c.png"  class ="main-img"> -->
+        </div>
+    </div>
+
+    <div class="section" id="section7">
+        <div class="inner">
+            <div class="title-text">About Me</div>
+            <div class="clear"></div>
+            <div class="subtitle-text">
+                I have degrees in Architecture, Comparative Literature, and Japanese. You might wonder how these are related to UX (or to each other), but different fields have allowed me to look at problems from different angles. All of them required proper research to back up my arguments. On the side, I've dabbled in my technical interests (web design, buying the latest programming books, dreaming of learning of signal processing, data science). I'm passionate about both design and data. And I seriously need a new picture.  <br><br>
+                Contact me at<br><i><b> yatar.lauren[at]gmail.com</b></i><br><br>
+                <a href="mailto:yatar.lauren@gmail.com">
+                    <img src="assets/img/close-envelope.svg" class="icon" alt="email">
+                </a>
+                <a href="https://www.linkedin.com/in/lauren-yatar/">
+                <img src="assets/img/linked-in-square-button.svg" class="icon" alt="linkedin">
+            </a>
+                <a href="https://github.com/lyatar">
+                <img src="assets/img/github-logo.svg" class="icon" alt="github">
+            </a>
+        </div>
+    </div>
+
+        <div class="inner">
+            <img data-src="assets/img/me.jpg"  class ="main-img">
+        </div>
+    </div>
+
+</div>
+
+</body>
 </html>

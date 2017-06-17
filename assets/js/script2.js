@@ -1,19 +1,18 @@
+// script for other pages
+
 // $(document).ready(function() {
 // 	$('#fullpage').fullpage();
 // });
 
 // script for from page
 
-
 $(document).ready(function() {
-    console.log('In case anyone inspects this, HI!');
-
     $('#fullpage').fullpage({
         anchors: ['firstPage', 'secondPage', '3rdPage','4thPage',
         '5thPage','6thPage','7thPage'],
         // sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
         // verticalCentered: false,
-        navigation: true,
+        navigation: false,
         navigationPosition: 'right',
         // navigationTooltips: ['First page', 'Second page', 'Third and last page'],
         responsiveWidth: 900,
@@ -21,6 +20,10 @@ $(document).ready(function() {
         },
         css3: true,
         paddingTop: 70,
+        autoScrolling: false,
+        fitToSection: false
+
+
     });
 
     // big button hover overs
