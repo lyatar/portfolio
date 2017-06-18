@@ -47,6 +47,11 @@ a {
     animation: visible 3s linear forwards;
     -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
     animation-delay: 2s;
+}
+
+.body-text, .subcaption-text {
+    font-size: 14px;
+    margin: 20px 30px 25px 20px;
 
 }
 
@@ -407,15 +412,16 @@ div#navmenu {
 
 
 @keyframes moving {
-    from {transform: translateX(20px);}
-    to {transform: translateX(500px);}
+    from {transform: translate(20px, 0px);}
+    to {transform: translate(500px, -40px);}
+
     0%   { opacity: 1; }
     100% { opacity: 0.1;}
 }
 
 @keyframes removing {
-    from {transform: translateX(-20px);}
-    to {transform: translateX(-500px);}
+    from {transform: translate(-20px, 0px);}
+    to {transform: translate(-500px, 50px);}
     0%   { opacity: 1; }
     100% { opacity: 0.1;}
 }
