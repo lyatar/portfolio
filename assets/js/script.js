@@ -38,6 +38,9 @@ $(document).ready(function() {
             '-moz-box-shadow' : '1px 2px 1px 0px rgba(224,224,224,1)',
             'box-shadow': '1px 2px 1px 0px rgba(224,224,224,1)'})
             .css({ opacity: 1 });
+
+
+
     });
 
 });
