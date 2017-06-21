@@ -41,6 +41,20 @@ $(document).ready(function() {
             '-moz-box-shadow' : '1px 2px 1px 0px rgba(224,224,224,1)',
             'box-shadow': '1px 2px 1px 0px rgba(224,224,224,1)'})
             .css({ opacity: 1 });
+
     });
+
+    $(".diagram").click(function() {
+        $("#overlay").show();
+        $(this).addClass("pic-click");
+    });
+
+    $("#overlay").click(function() {
+        $(this).hide();
+        $(".diagram").removeClass("pic-click");
+    });
+
+
+
 
 });

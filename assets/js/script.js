@@ -1,13 +1,7 @@
-// $(document).ready(function() {
-// 	$('#fullpage').fullpage();
-// });
-
-// script for from page
-
-
 $(document).ready(function() {
-    console.log('In case anyone inspects this, HI!');
+    console.log('In case anyone inspects the javascript, HI! <3 Lauren');
 
+// script for fullpage
     $('#fullpage').fullpage({
         anchors: ['firstPage', 'secondPage', '3rdPage','4thPage',
         '5thPage','6thPage','7thPage'],
@@ -23,6 +17,7 @@ $(document).ready(function() {
         paddingTop: 70,
     });
 
+//jquery
     // big button hover overs
     $('.big-button a').mouseover(function(){
         $(this).css({
@@ -38,9 +33,9 @@ $(document).ready(function() {
             '-moz-box-shadow' : '1px 2px 1px 0px rgba(224,224,224,1)',
             'box-shadow': '1px 2px 1px 0px rgba(224,224,224,1)'})
             .css({ opacity: 1 });
+                });
 
 
 
-    });
 
 });

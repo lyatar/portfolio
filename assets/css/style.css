@@ -374,7 +374,28 @@ div#navmenu {
   float: right;
 }
 
+/* for lightbox */
+#overlay {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.75);
+    /*background: white;*/
+	top: 0px;
+	left: 0px;
+	z-index: 20;
+}
 
+.pic-click {
+	position: fixed;
+	z-index: 21;
+	width: 100%;
+	top: 10%;
+	left: 10%;
+
+
+}
 .bobbing {
 
     animation: bobbingAnim ease-in-out .5s infinite;
@@ -413,7 +434,7 @@ div#navmenu {
 
 @keyframes moving {
     from {transform: translate(20px, 0px);}
-    to {transform: translate(500px, -40px);}
+    to {transform: translate(520px, -40px);}
 
     0%   { opacity: 1; }
     100% { opacity: 0.1;}
@@ -421,7 +442,7 @@ div#navmenu {
 
 @keyframes removing {
     from {transform: translate(-20px, 0px);}
-    to {transform: translate(-500px, 50px);}
+    to {transform: translate(-520px, 50px);}
     0%   { opacity: 1; }
     100% { opacity: 0.1;}
 }
