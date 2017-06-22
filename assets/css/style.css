@@ -161,6 +161,25 @@ a.big-button:hover{
     animation: visible 5s infinite;
 }
 
+.cat {
+    position: relative;
+    width: 200px;
+    letter-spacing: 2px;
+    color: #395967;
+    padding: 5px 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline-block;
+
+
+}
+
+.cat-container {
+    display: inline-block;
+    text-align: center;
+    width: 80%
+}
+
 .square {
     position: absolute;
 	width: 200px;
