@@ -273,19 +273,21 @@ a.footer-items:hover {
 }
 
 
-/*#section1 {
+/*#section2 {
     text-align: center;
     background:
     linear-gradient(
         rgba(255,255,255, 0.2),
         rgba(255,255,255, 0.1)),
-    url('../img/test.jpg');
+    url('../img/testbg.png');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-weight: 900;
 }*/
+
 .section {
         text-align: center;
         background-color: #ecf0f3;
