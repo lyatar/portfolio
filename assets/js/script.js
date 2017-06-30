@@ -9,13 +9,21 @@ $(document).ready(function() {
         // verticalCentered: false,
         navigation: true,
         navigationPosition: 'right',
-        // navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+        navigationTooltips: ['Introduction', 'How far from Comfort?', 'Field Studies', 'Re:birth UI', 'Twitter Analysis', 'About Me/Contact'],
         responsiveWidth: 900,
         afterResponsive: function(isResponsive){
         },
         css3: true,
         paddingTop: 70,
+
+
+
+
     });
+
+
+
+
 
 //jquery
     // big button hover overs

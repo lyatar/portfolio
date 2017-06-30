@@ -411,7 +411,7 @@ div#navmenu {
 .pic-click {
 	position: fixed;
 	z-index: 21;
-	width: 100%;
+	width: 100;
 	top: 10%;
 	left: 10%;
 
@@ -529,7 +529,8 @@ div#navmenu {
     }
 
     img.diagram {
-        max-width: 80% ;
+        max-height: 50%;
+        max-width: 80%;
         margin: 20px 20px 25px 20px;
     }
     .tag-container {
