@@ -97,6 +97,7 @@ a {
     margin: 5px 350px 50px 125px;
     text-align: left;
     color: #748a94;
+
 }
 
 .header-text {
@@ -163,7 +164,7 @@ a.big-button:hover{
 
 .cat {
     position: relative;
-    width: 200px;
+    width: 350px;
     letter-spacing: 2px;
     color: #395967;
     padding: 5px 5px;
@@ -325,7 +326,7 @@ a.footer-items:hover {
 .content {
     background-color: white;
     left: 50px;
-    top: 50px;
+    top: 100px;
     width: calc(100% - 50px);
     position: relative;
     text-align: center;
@@ -533,12 +534,13 @@ div#navmenu {
         max-width: 80%;
         margin: 20px 20px 25px 20px;
     }
+
     .tag-container {
         margin: 50px 2px 25px 10px;
         float: left;
         opacity: 0.5;
-
     }
+
 
     @keyframes moving {
         from {transform: translate(-200px, 0px);}

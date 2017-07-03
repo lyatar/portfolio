@@ -9,7 +9,7 @@ $(document).ready(function() {
         // verticalCentered: false,
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['Introduction', 'How far from Comfort?', 'Field Studies', 'Re:birth UI', 'Twitter Analysis', 'About Me/Contact'],
+        navigationTooltips: ['Introduction', 'Climate Data Visualization', 'Field Studies', 'Re:birth UI', 'Twitter Analysis','Web Design', 'About Me/Contact'],
         responsiveWidth: 900,
         afterResponsive: function(isResponsive){
         },
