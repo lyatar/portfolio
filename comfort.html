@@ -172,7 +172,7 @@
     <div class="header-text"> Interaction must be meaningful!</div><br>
     <div class="clear"></div>
     <div class="paragraph-text">
-    This is one of my earliest examples (this is Fullerton in July) where I experimented with interactivity and learned that it did nothing but add bling. If you right click, reload, you will see that the diagram starts off as red and then goes to gray for no real reason (other than fun). Hovering over the numbers they bounce. If you can skillfully over over a number long enough it will animate to the center do you can more easily see the number and the bar. <br><br>
+    This is one of my earliest examples (this is Fullerton in July) where I experimented with interactivity and learned that it did nothing but add bling. If you right click, reload, you will see that the diagram starts off as red and then goes to gray for no real reason (other than fun). Hovering over the numbers they bounce. If you can skillfully hover over a number long enough it will move to the center so you can more easily see the away from comfort value next to its corresponding bar. <br><br>
 
     <!-- d3 -->
         <!-- The dy-canvas div is where you should create any SVGs using D3 -->
@@ -212,7 +212,7 @@
 
 
 
-    <div class="header-text">Even if this polished iteration was clean and simple, it wasn't clear how comfortable it was during the day and comparing across hours was difficult. </div>
+    <div class="header-text">Even if this polished iteration was clean and simple, it wasn't clear how comfortable it was day to day and comparing across hours was difficult. </div>
     <div class="paragraph-text"> I lost the horizontal scroll features from my earlier sketch that made it easy to compare against the same hours. I went back to the drawing board to have a more holist view of the dry bulb temperature for the climate. The tooltip was helpful for showing more information, but perhaps I could try to work with gradients to help better decipher the value differences? </div>
 
 
@@ -221,7 +221,7 @@
     <div class="clear"></div>
     <img src="assets/img/read.png"  class ="diagram">
     <div class="paragraph-text">
-        This one takes the same concept as earlier iterations, but with the added goal of creating a more holistic story about the climate. What is the temperature like everyday versus when you compare it to monthly.
+        This uses the same concept as earlier iterations, but with the added goal of creating a more holistic story about the climate. What is the temperature like everyday versus to when you compare it to monthly?<br><br>
         Note: You might notice that the bar graph and the median point in the line graph do not match up even though they should be the same value. This is likely due to the different plotting and rounding mechanisms for line graphs vs bar charts. Since the values are in Celsius, a small rounding difference shows a big gap.
     </div>
     <div class="header-text"> Example 1</div><br>
@@ -245,7 +245,7 @@
     </div>
 
 
-    <div class="header-text"> Ways to Further Improve</div>
+    <div class="header-text"> Ways to Further Improve the Climate Visualization</div>
     <div class="clear"></div>
     <div class="paragraph-text">
         This is a very early and exploratory attempt to look at d3 and climate data in the given time frame of 10 weeks (even interactivity seemed out of scope at a time). For this to be more of a tool requires more advanced front-end development (the seminar was for architecture and building science students with some programming (javascript was not required)) which was out of the scope of this 2 unit seminar. However, within the scope some ways to improve the prototype would be to add:
@@ -255,6 +255,8 @@
             <li>Clearer articulation of what data is being shown (better annotation of the axes and consistency)</li>
             <li>Adjust Scale (The scale goes from -30 to 30, but many places can be more than -30C from the comfort zone (Alaska), but for a place to be 54C (30C above 24C) is very concerning and unlikely).</li>
             <li>Ability to turn on and turn on functions (Are we showing too much at one time? Do I really want to see max and min ranges?)</li>
+            <li>Ability to see more than one climate (you can load multiple epw files and they will display, but it is very heavy on the browser and svg canvas size must be adjusted)</li>
+            <li>Gradient Color (the color of a comfortable square is a very very light blue instead of white which is confusing and was a criticism of graph)</li>
         </ul>
         </div>
 
@@ -263,7 +265,7 @@
     <div class="clear"></div>
     <div class="paragraph-text">
         I'm the type who wants to see important information boiled down to its simplest form. However, you might lose background information that's important for the whole picture. In data visualization  you gain and lose different information through different scales. What do you want to show and what is necessary? A better way to show information is to choreograph when information is showed by time. You can animate when more information would be revealed. A tooltip can give you the little details without obstructing your view of the whole picture. You don't have to show everything at once.
-        <br><br>Another important lesson I learned is that software and coding are essentially tools. Knowing how they function and what you can do is important, but without having an idea of what you want to do with them won't get you very far. <span class="highlight">You need to have a story to tell! </span>
+        <br><br>Another important lesson I learned is that software and coding are essentially tools. Knowing how they function and what you can do is important, but without having an idea of what you want to do with them won't get you very far.<br><br> <span class="highlight">You need to have a story to tell! </span>
         <br><br><br><br>
     </div>
 
