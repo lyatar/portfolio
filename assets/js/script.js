@@ -7,7 +7,7 @@ $(document).ready(function() {
         '5thPage','6thPage','7thPage'],
         // sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
         // verticalCentered: false,
-        navigation: true,
+        navigation: false,
         navigationPosition: 'right',
         navigationTooltips: ['Introduction', 'Climate Data Visualization', 'Field Studies', 'Re:birth UI', 'Twitter Analysis','Web Design', 'About Me/Contact'],
         responsiveWidth: 900,
