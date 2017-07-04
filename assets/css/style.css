@@ -439,10 +439,13 @@ div#navmenu {
 
 .pic-click {
 	position: fixed;
+    float:left;
 	z-index: 21;
-	width: 100;
-	top: 10%;
-	left: 10%;
+	max-width: 90% !important ;
+    max-height: 90% !important ;
+	top: 1%;
+	right: 5%;
+
 
 
 }
@@ -511,7 +514,8 @@ div#navmenu {
 
 @media (max-width:640px) and (orientation: portrait){
     .content {
-        left: 10px;
+        left: 5px;
+        width: calc(100% - 2.5px);
 
     }
     .inner{
@@ -569,6 +573,16 @@ div#navmenu {
         float: left;
         opacity: 0.5;
     }
+
+    .footer-items {
+
+    	padding: 10px;
+        font-size: 12px;
+    }
+
+    .r-footer a {
+    right: 5px;
+}
 
 
     @keyframes moving {
