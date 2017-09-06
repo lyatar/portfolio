@@ -9,7 +9,7 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
         anchors: ['firstPage', 'secondPage', '3rdPage','4thPage',
-        '5thPage','6thPage','7thPage'],
+        '5thPage','6thPage','7thPage', '8thPage'],
         // sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
         // verticalCentered: false,
         navigation: false,

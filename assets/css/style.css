@@ -296,7 +296,11 @@ a.footer-items:hover {
 
 }
 
-
+.drop {
+    -webkit-box-shadow:0 4px 2px -2px #E0E0E0;
+    -moz-box-shadow: 0 4px 2px -2px #E0E0E0;
+    box-shadow: 0 2px 4px 1px #E0E0E0;
+}
 /*#section2 {
     text-align: center;
     background:
