@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="ARCH-229-s17/css/style.css"> <!-- d3 CSS  -->
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fauna+One|PT+Sans|Playfair+Display" rel="stylesheet">
     <script src="assets/js/jquery-1.9.1.js"></script>
     <script src = "assets/js/script2.js"></script>
@@ -48,34 +49,6 @@
 
 <!-- sections -->
 
-<!-- <div id="fullpage">
-    <div class="section" id="section1b">
-
-
-
-        <div class="inner">
-            <div class="title-text">How far from Comfort?</div>
-            <div class="clear"></div>
-            <div class="subtitle-text">
-                Building scientists and architects use weather data collected from weather towers to help them in their design decisions and research. This information is readily available as epw files. However as this information is vast, it is important that there are clear methods for visualizing these. Many of the visualization methods make it difficult to fully understand what the graphs are saying. Plus, they aren't the prettiest (which makes it harder to read).
-            </div>
-            <img src="assets/img/down-arrow.svg"  class ="arrow bobbing">
-        </div>
-        <div class="inner">
-            <img src="assets/img/c.png" class ="main-img">
-        </div>
-    </div> -->
-<!--
-
-    <div class="section" id="section2">
-            <img src="assets/img/viz.gif"  class ="diagram">
-	</div>
-
-    <div class="section" id="section3">
-
-
-    </div> -->
-</div>
 
 <!-- end of full, page, content start -->
 <div class="content">
@@ -85,7 +58,9 @@
 	</div>
 
 <!-- first -->
-<div class="title-text">Reco-co (currently in-progress)</div>
+
+
+<div class="title-text">Reco-co - A Comic Recommendation App</div>
 
 <div class="clear"></div>
     <video controls="controls" width="300" height="600" name="Video Name" src="assets/img/Preview2.mov" autoplay loop class="drop"></video>
@@ -98,20 +73,145 @@ I thought people had a hard time tracking releases by author's they liked, but t
 </div>
 
 
+<div class="header-text">Initial Potential Area of Interest: Keeping up with your favorite authors' releases</div>
+<div class="clear"></div>
+<div class="paragraph-text">
+There are a lot of sources to find out new book releases or provide suggestions for new products to try out, but if you have a favorite author or a broader category of something you like (i.e., a particular niche genre), it may be hard to find out when there are new releases, especially if you are a casual fan.
+</div>
+<div class="header-text">Insights from User Interviews</div>
+<div class="clear"></div>
+<div class="paragraph-text">
+<i class="fa fa-users" aria-hidden="true"></i>
+</div>
+
+<div class="header-text">Book Readers Don't Really Need to Track Releases</div>
+<div class="clear"></div>
+<div class="paragraph-text">
+I first interviewed 4 users who read books to get their insights and find out why they ready books.
+<ul>
+    <li>Contrary to what I thought,  a lot of people aren’t as interested in keeping track of authors or books.</li>
+    <li>However, this might be due to the nature of a bookstore because of the book landscape (books are generally cheaper online so people who go to book stores are usually there to look for an in-person recommendation or to support local bookstores. If you know what you want you would just automatically order it online to be shipped to you).</li>
+    <li>Many of the books that authors release aren’t in series so it does not require the reader to read the book in sequential order or to read all of the books by an author.</li>
+    <li>Many bookstores are ordered based by genre.</li>
+    <li>New releases typically are featured in the front of stores. Popular releases are usually featured in the new release section in multiple stores in the area.</li>
+    <li>It seems like most of the ways to keep track of releases are digitally through email updates or reading social media or blog posts about new books.</li>
+
+</ul>
+</div>
+
+<div class="header-text">HOWEVER Comic Book Readers DO have a NEED but the Real Struggle is to Find What to Read</div>
+<div class="clear"></div>
+<div class="paragraph-text">
+I interviewed 4 more potential users of the app. These were frequenters of a local comic book store and below is a summary of some of their issues. Most of these issues affect newbies or people just starting to get into comics or people who stopped reading and have to catch up. Some of the points:
+<ul>
+<li>He had a problem finding out about what comics to read first because there was such a big body of work. He found recommendations by asking people in store and from online.</li>
+<li>When you’re just starting out there’s a tendency of people who have read further ahead than you to spoil parts of the story line.</li>
+<li>Should I start with past issues and the classic comic book story lines or start with the current story line?</li>
+<li>You see a lot of books but you’re not sure what you might like or not.</li>
+<li>Learning about options</li><ul>
+<li>What are issues and what are trades?</li>
+<li>Learning about digital option (comixology).</li></ul>
+<li>A lot of comic book fans prefer stories that aren’t really easy for newbs.</li>
+<li>The volume/issue numberings can be confusing and it can be hard to track what exactly you’re looking for.</li>
+<li>Crossovers between comics/universes can be confusing.</li>
+<li>One user got into comics from the Green Lantern movie which spured him into reading more comics with Hal Jordan and launched him into reading other DC Comics.</li>
+
+He said he likes comics because of the story telling and the characters.
+He had a problem finding out about what comics to read first because there was such a big body of work. He found recommendations by asking people in store and from online.
+Says it’s expensive. If he really likes a series he’ll get it in trade.
+
+</ul>
+</div>
+
+
 <div class="header-text">Persona Based on Research - The Guy who wants to Read Comics</div>
 <div class="paragraph-text">
     <img src="assets/img/recoco-1.png" class ="diagram">
 </div>
 <div class="clear"></div>
-<div class="header-text">Product Definition Statement</div>
-<div class="paragraph-text">
-    An app for people new to comics that recommends comics.<br>
-</div>
 
-<div class="header-text">User-Testing</div>
+<div class="header-text">Competitive Analysis</div>
+<div class="paragraph-text">
+    <b>Comic Book Stores </b>
+    <ul>
+        <li>Store Clerks can recommend comics, but is biased towards their taste/ knowledge.</li>
+        <li>Can create a pull-list (a list of book titles you provide to the book clerk) (like pre-ordering a book/ subscription service).</li>
+        <li>You get an email notification and will be able to pick up the books after they are released.</li>
+        <li>Also helpful for bookstore to know what they should keep in stock and what not.</li>
+    </ul>
+    <b>League of Comic Geeks</b>
+    <ul>
+        <li>App where users can create online pull lists.</li>
+        <li>This app is created mainly for Comic Book fans apparently by comic book fans. </li>
+        <li>It is generally sorted based on publisher and fans can create their own pull list.</li>
+        <li>It requires the user to have a general idea about what comics they like since you search by publisher or by week. You can also see reviews.</li>
+
+    </ul>
+</div>
+<div class="clear"></div>
+
+
+<div class="header-text">User Goals for App</div>
+<div class="paragraph-text">
+    <ul>
+        <li>Spend less time finding comics, more time reading comics.</li>
+        <li>To easily find comics he likes without having to read 50 comics he doesn't like first.</li>
+        <li>Gain a better understanding of how different comic books are connected to one another.</li>
+        <li>Be able to dive into the fandom head first.</li>
+    </ul>
+</div>
+<div class="clear"></div>
+
+<div class="header-text">Early Wireframes + Rapid User Testing</div>
+    <img src="assets/img/circle_testing.jpg" class ="diagram">
+    <div class="clear"></div>
+    <div class="paragraph-text">
+        The first initial user test aimed to see how a user would react to a screen and how he would navigate without any prompting. He was not told this was an app for comics or if or how these screens are connected and was only presented with these screens. For all of the designs, the user mentioned he wanted to click on a picture. These wireframes are three different possible designs for the recommendation page(home page).
+        <br><br>
+        <b>What would you see after you click and what task do you think you can complete on this page?</b>
+        <br>
+        Design 1:
+        <ul>
+            <li>When clicked, he imagined the picture clicked would zoom in and “Like a whole new page where you scroll down and there’s more info” would appear.</li>
+            <li>Pick a movie to watch (purchase/ rent)</li>
+        </ul>
+        Design 2:
+        <ul>
+            <li>He doesn’t really know what would come up for the second one because all of the information
+            he needs is there. He guesses if it was a list of things to buy, it would be added to his cart for
+            check out.</li>
+            <li>Pick a movie to watch (purchase/ rent)</li>
+        </ul>
+        Design 3:
+        <ul>
+            <li>Just wanted to click the cow to see if something would happen. He guesses it would take him back to see a root menu if he clicked the cow.</li>
+            <li>Pick a book to read.</li>
+        </ul>
+        Last Comments:
+        <ul>
+            <li>Likes the third one because it seems like he can side scroll and because there are different sections.</li>
+            <li>Keywords thing (design 2) takes a lot of space. He doesn’t find it helpful.</li>
+        </ul>
+    </div>
+
+<div class="header-text">Revised Wireframes</div>
 <div class="clear"></div>
 <div class="paragraph-text">
-    Users were given a series of four tasks that took them through the journey of watching a Spider Man and needing a starting point to becoming a more intermediate fan who need needs more advanced features.
+    Revised wireframes decided to use scrolling and work on a more picture focused app as that what the user was most attracted. (Animals are a place holder for comic heroes.)
+</div>
+<div class="clear"></div>
+    <img src="assets/img/Letter.png" class ="diagram">
+    <div class="clear"></div>
+
+
+
+
+
+<div class="header-text">Hi-Fidelity Prototype + User-Testing</div>
+<div class="clear"></div>
+<div class="paragraph-text">
+    Users were given a series of four tasks that took them through the journey of being someone who just needs a starting point to becoming a more intermediate fan who need needs more advanced features. Each iteration of the test aims to see if the app will answer the pain points found from the earlier issues.<br><br>
+    Design-wise, this iteration maintains the same swipe feel, but follows standard navigation for iphones more closely.
     <div class="clear"></div>
     <video controls="controls" width="300" height="600" name="Video Name" src="assets/img/Preview2.mov" autoplay loop></video>
 </div>
@@ -124,6 +224,37 @@ I thought people had a hard time tracking releases by author's they liked, but t
         <li>It was confusing to know where you were in the app.</li>
     </ul>
 </div>
+
+<div class="header-text">Pain Point: How do I find a starting point?</div>
+<div class="clear"></div>
+<div class="paragraph-text">
+    The first situation was designed to check the flow of the app. The entry point into the app is through searching for a character, therefore it was important to see where the user would click to start a search.
+    <b>Example Situation</b><br>
+    You just watched the new Spider Man movie and want to start reading the comics, but you haven’t read any comics before and you’re not sure where to start. You heard about an app called Reco Co and decide to use it find a Spider Man comic to purchase.
+    <b>Testing for:</b><br>
+    <ul>
+    <li>How does the app flow? </li>
+    <li>Is it easy to find one comic?</li>
+    <li>Are there navigation issues?</li>
+    </ul>
+    Findings
+    <ul>
+        <li>Users found it easy to find a single comic.</li>
+        <li>It was difficult to access and find the information for more advanced users during the user testing because of comic-specific jargon. </li>
+        <li>The text was lengthy (making it difficult to know what to do) and iconography was confusing.</li>
+        <li>Text size was too small.</li>
+        <li>It was confusing to know where you were in the app (navigation issues).</li>
+        <li>Thought explore would be more free form (word usage)</li>
+    </ul>
+    Changes
+    <ul>
+        <li>Navigation</li>
+    </ul>
+
+
+</div>
+
+
 
 
     <div class="clear"></div>
@@ -142,6 +273,7 @@ I thought people had a hard time tracking releases by author's they liked, but t
             <li>Simplified navigation options (instead of explore, search)</li>
         </ul>
     </div>
+
 <div class="header-text">Changes to Character Page</div><br>
 <div class="clear"></div>
     <img src="assets/img/recoco-a.png" class ="diagram drop">
@@ -164,6 +296,12 @@ I thought people had a hard time tracking releases by author's they liked, but t
             </ul>
         </div>
 
+<div class="header-text">What is this app really?</div><br><br>
+<div class="clear"></div>
+    <div class="paragraph-text" >
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71R-9WAr%2BJL._SX355_.jpg">
+        <div class="clear"></div><br>
+        It's like training wheels for a comic book reader. It helps show the user how to navigate through the comic book world but gives them enough agency to make decisions about what they want to read. The user grows with the app as s/he becomes "more advanced in comics." </div>
     <!-- <img src="assets/img/recoco-3.png" class ="diagram drop">
     <div class="clear"></div><br>
     <img src="assets/img/recoco-4.png" class ="diagram drop">
@@ -175,8 +313,6 @@ I thought people had a hard time tracking releases by author's they liked, but t
 
 
 
-
-    <div class="paragraph-text">
         <br><br><br><br>
     </div>
 </div>

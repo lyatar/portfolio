@@ -107,7 +107,7 @@ a {
     float: left;
     font-size: 16px;
     line-height: 1.5;
-    margin: 5px 350px 50px 125px;
+    margin: 5px 125px 50px 125px;
     text-align: left;
     color: #748a94;
 
@@ -482,6 +482,8 @@ div#navmenu {
 
 
 }
+
+
 .bobbing {
 
     animation: bobbingAnim ease-in-out .5s infinite;
@@ -637,4 +639,9 @@ div#navmenu {
         0%   { opacity: 1; }
         100% { opacity: 0.1;}
     }
+}
+
+.fa.fa-users {
+    font-size: 100px;
+    margin: 25px;
 }
