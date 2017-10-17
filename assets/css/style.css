@@ -582,6 +582,7 @@ div#navmenu {
 /* media queries */
 
 @media (max-width:640px) and (orientation: portrait){
+
     .content {
         left: 5px;
         width: calc(100% - 2.5px);
@@ -640,6 +641,11 @@ div#navmenu {
         max-height: 50%;
         max-width: 80%;
         margin: 20px 20px 25px 20px;
+    }
+
+    img.cont-img {
+        max-width: 60%;
+        margin-left: 25px;
     }
 
     .tag-container {
