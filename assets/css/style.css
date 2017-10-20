@@ -625,7 +625,7 @@ div#navmenu {
 
     #logo a {
         font-size: 14px;
-        margin: 0px 20px 5px 0px;
+        margin: 0px 20px 5px -10px;
         position: absolute;
     }
     .nav-items {
