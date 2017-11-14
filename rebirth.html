@@ -24,34 +24,46 @@
     <script src="assets/js/jquery-1.9.1.js"></script>
     <script src = "assets/js/script2.js"></script>
     <script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>'
 </head>
 <body>
 
     <!-- header and footer -->
-    <div id="header">
-        <div id="logo"><a href="index.html">Lauren Yatar</a></div>
-        <!-- <div id="navmenu">
-            <ul>
-                <li class="nav-items"><a href="index.html#secondPage">Projects</a></li>
-                <li class="nav-items"><a href="index.html#7thPage">Contact</a></li>
-            </ul>
-        </div> -->
-        <div id="navmenu">
-            <div class="dropdown nav-items active">
-              <span><a href="index.html#secondPage">Projects</a></span>
-              <div class="dropdown-content">
-                  <p><a href="recoco.html"><img src="assets/img/42.png" width=160px><br>Reco-Co</a></p>
-
-                <p><a href="comfort.html"><img src="assets/img/32.png" width=160px><br>How Far from Comfort?</a></p>
-                <p><a href="field-studies.html"><img src="assets/img/35.png" width=160px><br>Field Studies</a></p>
-                <p><a href="rebirth.html"><img src="assets/img/33.png" width=160px><br>RE:Birth UI</a></p>
-                <p><a href="twitter.html"><img src="assets/img/36.png" width=160px><br>Twitter Analysis</a></p>
-                <p><a href="websites.html"><img src="assets/img/37.png" width=160px><br>Web Design</a></p>
-              </div>
+    <!-- navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">Lauren Yatar</a>
             </div>
-             <div class="nav-items"><a href="index.html#4thPage">About/ Contact</a></div>
-        </div>
-    </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a href="index.html#secondPage" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="recoco.html">Reco-Co</a></li>
+                      <li><a href="comfort.html">How Far from Comfort?</a></li>
+                      <li><a href="rebirth.html">RE:Birth UI</a></li>
+                      <li><a href="twitter.html">Twitter Analysis</a></li>
+                      <li><a href="field-studies.html">Field Studies</a></li>
+                      <li><a href="websites.html">Web Design</a></li>
+                  </ul>
+                </li>
+                <li><a href="index.html#3rdPage">About/ Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+    <!-- navigation end -->
 
 
 <!-- sections -->
@@ -83,10 +95,12 @@
     <div id="overlay">
         <!-- <img class="button" id="close" src="close.png"> -->
     </div>
-        <div class="title-text">re:birth</div>
 
-    <div class="clear"></div>
+    <div class="title-text">re:birth</div>
+
     <img src="assets/img/test3.png"  class ="diagram">
+
+
     <div class="clear"></div>
     <div class="paragraph-text">
         People who are stressed use stress wearables to track their stress, but many of these are seen as being kind of nerdy and are highly obvious. They don't attract people who aren't into tech or health. My mission was to design both a wearable and matching UI that would turn stress into something positive. Can you re:set your stress levels?
@@ -205,7 +219,7 @@
         My final color palette deviated from the red/blue association for heat as I began to pull in elements of dark and light. A full red screen with red elements and a full blue screen with blue elements did not have enough contrast. I chose colors that were more respective of the iconography of the leaves and the final flower. The final flower is blue which is reminiscent of the original temperature inspired palette.
         </div> -->
 
-    <div class="header-text">
+    <!-- <div class="header-text">
             Designing a UI to match the Leafy Headband
     </div>
 
@@ -217,7 +231,7 @@
     <div class="clear">
     <div class="paragraph-text">
         Prior to this project, we had worked on a variety of visual design basics (color, layout, typography, etc.). These were also put into consideration in the design of this interface.
-    </div>
+    </div> -->
     <div class="header-text">
         An Iterative Process of Re-doing and Adding Screens.
     </div>
@@ -274,11 +288,11 @@
 
 
     <div class="header-text">
-         How the Wearable and UI are Used Together (the final sketch as a story)
+         The Wearable and UI Together
     </div>
     <div class="clear">
     <img src="assets/img/paired.png" class="diagram">
-    <div class="paragraph-text">
+    <!-- <div class="paragraph-text">
         <br>
         One day, Isadora found herself working at her favorite cafe.
     <br><br>
@@ -300,7 +314,8 @@
     <br><br>
         10 p.m., just when the cafe was closing, she hit send. It was perfect and time flew by fast (in a good way). The leaf was a light yellowish-green. As she was packing her stuff, the barista cleaning smiled at her, she pulled her hair out of it's updo, shaking out her hair (with the pretty sensor leaf in sight) and exited stage left shining.
     <br><br>She nailed it.
-    </div>
+    </div> -->
+    <p><br><br></p>
 
 
     <div class="header-text">
@@ -339,6 +354,9 @@
 <div class="r-footer">
     <a href="twitter.html" class="footer-items"><b><u>Next:</b></u> A Substitute for Site Analysis? > </a></div>
 </div>
+
+<!-- back to top button -->
+        <div id="back-to-top"><a href="#top">Top</a></div>
 
 
 </body>

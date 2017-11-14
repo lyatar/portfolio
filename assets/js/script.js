@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    console.log('In case anyone inspects the javascript, HI! <3 Lauren');
+    console.log('ready~');
 
 // script for fullpage
     $('#fullpage').fullpage({
@@ -43,7 +43,28 @@ $(document).ready(function() {
             .css({ opacity: 1 });
                 });
 
+});
 
 
+// for cards
+$(document).ready(function(){
+    // card movements
+    $( ".card" ).hover(function() {
+        $(this).toggleClass("translate");
+        console.log("Card was clicked");
+        });
 
 });
+
+// for top button
+$(function () {
+      $(document).scroll(function () {
+        if ($(this).scrollTop() >  50) {
+            $('#back-to-top').show();
+        } else {
+            $('#back-to-top').hide();
+        }
+
+        console.log('ran');
+      });
+    });

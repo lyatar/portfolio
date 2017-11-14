@@ -15,7 +15,7 @@
 
 
 .x .tick text{
-    font-size: 10px;
+    font-size: 6px;
     fill: gray;
     font-family: Tahoma, Geneva, sans-serif;
 }
@@ -35,7 +35,7 @@
 
 
 svg.board {
-    background: #e9ebee;
+    /*background: #e9ebee;*/
     /*transform: translate(250px, 20px);*/
     margin: 10px;
 }

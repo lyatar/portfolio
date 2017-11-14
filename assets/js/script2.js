@@ -54,10 +54,17 @@ $(document).ready(function() {
         $(".diagram").removeClass("pic-click");
     });
 
-
-
-
-
-
-
 });
+
+// for top button
+$(function () {
+      $(document).scroll(function () {
+        if ($(this).scrollTop() >  50) {
+            $('#back-to-top').show();
+        } else {
+            $('#back-to-top').hide();
+        }
+
+        console.log('ran');
+      });
+    });

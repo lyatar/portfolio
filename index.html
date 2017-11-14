@@ -1,305 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107943765-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107943765-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'UA-107943765-1');
-</script>
+      gtag('config', 'UA-107943765-1');
+    </script>
+
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Hi, my name is Lauren Yatar and I have a passion for design, data, and UX.">
     <title>Lauren Yatar</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="assets/css/styleNew.css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="assets/js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css" />
-    <link href="https://fonts.googleapis.com/css?family=Fauna+One|PT+Sans|Playfair+Display" rel="stylesheet">
-    <script src="assets/js/jquery-1.9.1.js"></script>
-    <script src = "assets/js/script.js"></script>
     <script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+
 </head>
 
-
+<!-- body contents -->
 <body>
+<!-- navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Lauren Yatar</a>
+        </div>
 
-<!-- header and footer -->
-    <div id="header">
-        <div id="logo"><a href="index.html">Lauren Yatar</a></div>
-        <!-- <div id="navmenu">
-            <ul>
-                <li class="nav-items"><a href="index.html#secondPage">Projects</a></li>
-                <li class="nav-items"><a href="index.html#7thPage">Contact</a></li>
-            </ul>
-        </div> -->
-        <div id="navmenu">
-            <div class="dropdown nav-items active">
-              <span><a href="index.html#secondPage">Projects</a></span>
-              <div class="dropdown-content">
-                  <p><a href="recoco.html"><img src="assets/img/42.png" width=160px><br>Reco-Co</a></p>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="index.html#secondPage" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="recoco.html">Reco-Co</a></li>
+                  <li><a href="comfort.html">How Far from Comfort?</a></li>
+                  <li><a href="rebirth.html">RE:Birth UI</a></li>
+                  <li><a href="twitter.html">Twitter Analysis</a></li>
+                  <li><a href="field-studies.html">Field Studies</a></li>
+                  <li><a href="websites.html">Web Design</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#3rdPage">About/ Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+<!-- navigation end -->
 
-                <p><a href="comfort.html"><img src="assets/img/32.png" width=160px><br>How Far from Comfort?</a></p>
-                <p><a href="field-studies.html"><img src="assets/img/35.png" width=160px><br>Field Studies</a></p>
-                <p><a href="rebirth.html"><img src="assets/img/33.png" width=160px><br>RE:Birth UI</a></p>
-                <p><a href="twitter.html"><img src="assets/img/36.png" width=160px><br>Twitter Analysis</a></p>
-                <p><a href="websites.html"><img src="assets/img/37.png" width=160px><br>Web Design</a></p>
+
+<!-- contents -->
+<div id="fullpage">
+<div class="container">
+    <!-- front page -->
+    <div class="section active" id="section0">
+        <div class="row" >
+
+
+                <div class="movetxt square">
+                    <img src="assets/img/s.svg">
+                    <!-- <div class="movin-text">Architecture</div> -->
+                </div>
+                <div class="re-movetxt circle">
+                    <img src="assets/img/c.svg">
+                    <!-- <div class="movin-text">Comparative Literature</div> -->
+                </div>
+                <div class="caption-text" style="text-align: center; ">
+                        I'm a designer who finds <br>
+                        connections between the unexpected.
+                    <br>
+                    <div class='subcaption-text'>
+                    My process begins with a question. </div><br>
+
+                    <br>
+                </div>
+            </div>
+    </div>
+
+<div class="section" id="section2a">
+        <div class="row">
+            <div class="col-lg-12 col-centered">
+                <h1 style="text-align: center">Projects</h1><br>
+                <!-- <div class="tag-container" style="text-align: center">
+                    <div class="tag"> Data Visualization</div>
+                    <div class="tag"> UI/UX </div>
+                    <div class="tag"> Coding </div>
+                    <div class="tag"> Data Analysis </div>
+                    <div class="tag"> Research </div>
+                </div> -->
+            </div>
+        </div>
+        <!-- row 1 (4 items) -->
+        <div class="row">
+            <div class="col-sm-1 col-md-3 col-lg-3">
+              <div class="card">
+                <a href="recoco.html">
+                  <div class="card-header">
+                    RECOCO
+                  </div>
+                <img class="card-img-top" src="assets/img/004 copy.png" alt="RE:birth"/>
+                <div class="card-block">
+                  <!-- <p class="card-text">It's easy to find climate data, but the current tools to explore the data are difficult to use and are not visually pleasing.</p> -->
+                </div>
+                    </a>
+                </div>
+            </div>
+        <div class="col-sm-1 col-md-3 col-lg-3">
+          <div class="card">
+            <a href="rebirth.html">
+              <div class="card-header">
+                RE:birth
+              </div>
+            <img class="card-img-top" src="assets/img/final2.png" alt="RE:birth" style="margin-top: 12px"/>
+            <div class="card-block">
+              <!-- <p class="card-text">It's easy to find climate data, but the current tools to explore the data are difficult to use and are not visually pleasing.</p> -->
+            </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-sm-1 col-md-3 col-lg-3">
+        <div class="card">
+            <a href="comfort.html">
+            <div class="card-header" style="font-size: .8em">
+              How Far from Comfort?
+            </div>
+          <img class="card-img-top" src="assets/img/c.png" alt="How far from comfort?"/>
+          <div class="card-block">
+            <!-- <p class="card-text">It's easy to find climate data, but the current tools to explore the data are difficult to use and are not visually pleasing.</p> -->
+        </a>
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-1 col-md-3 col-lg-3">
+          <div class="card">
+              <a href="twitter.html">
+                  <div class="card-header"> Twitter + Storms </div>
+                  <img class="card-img-top" src="assets/img/map.png" alt="Twitter + Storms"/>
+              </a>
+          </div>
+        </div>
+    </div>
+        <!-- row 2 (4 items) -->
+        <div class="row">
+            <div class="col-sm-1 col-md-3 col-lg-3">
+              <div class="card">
+                  <a href="twitter2.html">
+                      <div class="card-header"> If City, then [x,y,z] </div>
+                      <img class="card-img-top" src="assets/img/section.png" alt="Research" style="margin-top: 0px"/>
+                  </a>
               </div>
             </div>
-             <div class="nav-items"><a href="index.html#4thPage">About/ Contact</a></div>
+        <div class="col-sm-1 col-md-3 col-lg-3">
+          <div class="card">
+              <a href="websites.html">
+                  <div class="card-header"> Web Design + Dev </div>
+                  <img class="card-img-top" src="assets/img/craig.png" alt="Web Sites" style="padding: 5px"/>
+              </a>
+          </div>
+        </div>
+        <div class="col-sm-1 col-md-3 col-lg-3">
+          <div class="card">
+              <a href="field-studies.html">
+                  <div class="card-header"> Field Studies </div>
+                  <img class="card-img-top" src="assets/img/map.jpg" alt="Research"/>
+              </a>
+          </div>
         </div>
     </div>
-<!-- <div id="footer"></div> -->
-
-<!-- slides -->
-<div id="fullpage">
-    <div class="section active" id="section0">
-
-        <div class="movetxt square">
-            <img src="assets/img/s.svg">
-            <!-- <div class="movin-text">Architecture</div> -->
-        </div>
-        <div class="re-movetxt circle">
-            <img src="assets/img/c.svg">
-            <!-- <div class="movin-text">Comparative Literature</div> -->
-        </div>
-        <div class="caption-text">
-                I'm a designer and a coder who finds <br>
-                connections between the unexpected.
-            <br>
-            <div class='subcaption-text'>
-            My process begins with a question. </div><br>
-                <a href="index.html#secondPage"><img src="assets/img/down-arrow.svg"  class ="arrow bobbing"></a>
-            <br>
-
-
-
-        </div>
-	</div>
-
-
-    <div class="section" id="section2a">
-        <div class="clear"></div>
-        <div class="content-text"> Projects<br></div>
-        <div class="paragraph-text">
-        <div class="container">
-
-            <b>Data Viz</b>
-                <p>Is there an easier way to look at climate data?</p>
-
-        <a href="comfort.html"><img src="assets/img/c copy.png" class="cont-img"></a>
-        </div>
-        <div class="container">
-
-            <b>Data Analysis</b>
-            <p>Can user-generated data be a substitute for site analysis?</p>
-
-
-        <a href="twitter.html"><img src="assets/img/c copy3.png" class="cont-img"></a>
-        </div>
-
-
-
-        <div class="container">
-                <b>UI/UX</b>
-                <p>Can you create an experience for finding comics?</p>
-
-            <a href="recoco.html"><img src="assets/img/c copy5.png" class="cont-img"></a>
-        </div>
-
-        <div class="container">
-
-                <b>Research</b>
-                <p>Are employees at their desks or in meetings?</p>
-
-            <a href="field-studies.html"><img src="assets/img/c copy2.png" class="cont-img"></a>
-        </div>
-        <div class="container">
-                <b>Web Design + Dev</b>
-                <p>What's the most important information
-for this website?</p>
-            <a href="websites.html"><img src="assets/img/c copy4.png" class="cont-img"></a>
-        </div>
-
 </div>
 
 
+<!-- end of projects -->
 
-    </div>
-
-<div class="section">
-
-    <div class="slide" id="section2">
-        <div class="clear"></div>
-        <div class="tag-container">
-            <div class="tag"> Architecture </div>
-            <div class="tag"> Data Visualization</div>
-            <div class="tag"> UI/UX </div>
-            <div class="tag"> Coding: D3.js </div>
-            <div class="tag"> Interaction Design </div>
-        </div>
-        <div class="clear"></div>
-        <br><br>
-        <div class="title-text"> Is there an easier way to look at climate data?</div>
-
-        <div class="paragraph-text">
-            It's easy to find climate data, but the current tools to explore the data are difficult to use and are not visually pleasing. There has to be a better way! This project looks at non-traditional ways of graphing climate data and questions how interactivity can change how we visualize data.
-        </div>
-        <div class="clear"></div>
-    <br><br>
-        <div class="big-button">
-            <a href="comfort.html">SEE MORE</a>
-        </div>
-
-    </div>
+<div class="section" id="section3">
+    <section id="about" class="specialBox" style="padding: 50px; height: 1000px">
 
 
 
-
-
-    <div class="slide" id="section3">
-
-        <div class="tag-container">
-            <div class="tag">Architectural Programming</div>
-            <div class="tag">Design Research</div>
-            <div class="tag">User Studies</div>
-            <div class="tag">Field Studies</div>
-            <div class="tag">Contextual Inquiry</div>
-        </div>
-        <div class="clear"></div>
-
-        <div class="title-text"> Are employees at their desks or in meetings? </div>
-
-        <div class="paragraph-text">
-            How might you conduct research to find out how employees' use their workplace? What tasks are employees doing and why do some people have to take calls outside? These were just a few of the things we questioned at our on-site observation studies.
-        </div>
-        <div class="clear"></div>
-
-        <div class="big-button">
-            <a href="field-studies.html">SEE MORE</a>
-        </div>
-    </div>
-
-    <div class="slide" id="section4">
-        <div class="tag-container">
-        <div class="tag">UI/UX</div>
-        <div class="tag">Visual Design</div>
-        </div>
-        <div class="clear"></div>
-        <div class="title-text"> How can we turn stress into something positive? </div>
-        <div class="paragraph-text">
-             Is stress always a bad thing? Do we really need to relax? Young women who are stressed don't always need to been told to calm down or to take an impromptu yoga session. She needs to be reminded that yes, she can do it!
-        </div>
-
-        <div class="clear"></div>
-
-
-        <div class="big-button">
-            <a href="rebirth.html">SEE MORE</a>
-        </div>
-
-    </div>
-
-    <div class="slide" id="section5">
-        <div class="tag-container">
-        <div class="tag">UX Design</div>
-        </div>
-        <div class="clear"></div>
-        <div class="title-text"> Can you train a newbie to find comics? </div>
-        <div class="paragraph-text">
-             I thought people had a hard time tracking releases by author's they liked, but through research I discovered that wasn't a problem! My research shifted to comic book readers who needed to track releases, but from interviews I discovered that users that had the biggest pain points were the comic readers who were just beginning to read comics.
-        </div>
-
-        <div class="clear"></div>
-
-
-        <div class="big-button">
-            <a href="recoco.html">SEE MORE</a>
-        </div>
-
-    </div>
-
-
-
-
-    <div class="slide" id="section6">
-
-        <div class="tag-container">
-        <div class="tag">Data Analysis</div>
-        <div class="tag">Text Analysis using Python</div>
-        <div class="tag">Twitter Sentiment Analysis</div>
-        <div class="tag">Natural Language Processing</div>
-    </div>
-
-        <div class="title-text"> Can user-generated data be a substitute <br>for site analysis?</div>
-        <div class="paragraph-text">
-            Twitter is an ideal data source because it's the voice of a group of users and it's geolocated (and no need to digitize). The power of geolocations unlocks the ability to match data with a wide variety of other data that has a location (like weather data). What new systems and structures can this reveal? Or is it all just noise without a significant signal?
+    <div class="row">
+        <div class="col-sm-1 col-md-6 col-lg-6">
+            <div class="thumbnail"><img src="assets/img/test.jpg"></div>
 
         </div>
+        <div class="col-sm-1 col-md-6 col-lg-6">
+                <h4>About Me</h4>
+                <p class="showImg">While working on my master's thesis, I found this <span> <b><u>diagram</b></u> </span>
+                    <img src="assets/img/IMG_3186.jpg"/>
+                    of how architects should also be hackers, data scientists, and algorithm builders.
+                    <img src="assets/img/IMG_3186.jpg">
+                    <!-- <span class="thumbnail"><img src="assets/img/IMG_3186.jpg" alt=""></span> -->
+                </p>
+                <p>Unknowingly, I'm on the path to be a data-informed designer.</p>
 
-        <div class="clear"></div>
+                <p>I'm currently located in the San Francisco Bay Area and I have degrees in Architecture, Comparative Literature, and Japanese and many technical interests. While completing my Masters of Architecture at UC Berkeley, I rediscovered my passion for web design and coding and found a new one in data. I enjoy making and building things and thinking about how it all comes together. </p>
+                <p>
+                Contact me at<br><i><b> yatar.lauren[at]gmail.com </b></i><br><br></p>
 
-        <div class="big-button">
-            <a href="twitter.html">SEE MORE</a>
-        </div>
-    </div>
-
-    <div class="slide" id="section7">
-        <div class="tag-container">
-            <div class="tag">Web Design</div>
-            <div class="tag">UI/UX</div>
-            <div class="tag">HTML/CSS/Javascript</div>
-        </div>
-        <div class="clear"></div>
-        <div class="title-text"> What's the most important information<br> for this website?</div>
-        <div class="paragraph-text">
-            My digital roots are in the web and designing webpages.
-
-        </div>
-
-        <div class="clear"></div>
-
-        <div class="big-button">
-            <a href="websites.html">SEE MORE</a>
-        </div>
-
-
-
-
-
-    </div>
-
-</div>  <!-- end of section -->
-
-    <div class="section" id="section8">
-        <div class="inner">
-            <div class="title-text">About Me</div>
-            <div class="clear"></div>
-            <div class="subtitle-text">
-                I'm currently located in the San Francisco Bay Area and I have degrees in Architecture, Comparative Literature, and Japanese. While completing my Masters of Architecture at UC Berkeley, I rediscovered my passion for web design and coding and found a new one in data. I enjoy making and building things (digital or physical) from anything I can find (even cardboard) and thinking about how it all comes together. I'm not afraid to solve problems by challenging normal conventions. And I seriously need a new picture.  <br><br>
-                Contact me at<br><i><b> yatar.lauren[at]gmail.com </b></i><br><br>
-                <a href="mailto:yatar.lauren@gmail.com">
-                    <img src="assets/img/close-envelope.svg" class="icon" alt="email">
+                    <a href="mailto:yatar.lauren@gmail.com">
+                        <img src="assets/img/close-envelope.svg" class="icon" alt="email">
+                    </a>
+                    <a href="https://www.linkedin.com/in/lauren-yatar/">
+                    <img src="assets/img/linked-in-square-button.svg" class="icon" alt="linkedin">
                 </a>
-                <a href="https://www.linkedin.com/in/lauren-yatar/">
-                <img src="assets/img/linked-in-square-button.svg" class="icon" alt="linkedin">
-            </a>
-                <a href="https://github.com/lyatar">
-                <img src="assets/img/github-logo.svg" class="icon" alt="github">
-            </a>
+                    <a href="https://github.com/lyatar">
+                    <img src="assets/img/github-logo.svg" class="icon" alt="github">
+                </a>
+                <!-- <a href="https://codepen.io/renn602/">
+                    <img src="https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png" class="icon" alt="codepen">
+                </a> -->
+            </p>
         </div>
     </div>
-
-        <div class="inner">
-            <img src="assets/img/me.jpg"  class ="main-img">
-        </div>
-    </div>
-
+    </section>
 </div>
+
+    <!-- end container -->
+</div>
+</div>
+
 
 </body>
 </html>

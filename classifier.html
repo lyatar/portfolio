@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lauren Yatar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="assets/classifier/style2.css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="assets/classifier/text_data.js"></script>
+    <script src="assets/classifier/sentiment.js"></script>
+</head>
+
+<!-- body contents -->
+<body>
+    <!-- navigation -->
+
+
+    <!-- contents -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-lg-4">
+                <h1 style="font-size: 50px"><strong>Blackbox Classifier</strong></h1><br>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Yes this works.</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Type something like how you're feeling or maybe a candidate qualification. Just please nothing like 'adfhdkjfadf' or '12323'" ></textarea>
+
+                </div>
+                 <button type="submit" class="btn btn-primary submit">Submit</button>
+            </div>
+
+            <div class="col col-lg-8" style="padding: 35px; ">
+                <p>How can machine learning be used in design? This is my work in progress experiment to try to test and see new possibilities!
+                <span style="font-size: 9pt">This is a very very rough classifier and is only useful for testing purposes (uses a dictionary method).</span></p>
+                <div class="chart"></div>
+                <p><b>You typed:</b></p>
+                <blockquote class="blockquote" class="output" style="padding: 15px; margin: 10px">
+                    <p class="output">You haven't submitted anything yet!<br>
+                    <i><span style="font-size:.8em;">(Try this quote: Stay positive and happy. Work hard and don't give up hope. Be open to criticism and keep learning. Surround yourself with happy, warm and genuine people. -Tena Desae)</span></i>
+                    </p>
+                </blockquote>
+                <p>Positive words:</p>
+                <p class="outputElement">n/a</p>
+                <p>Negative words:</p>
+                <p class="outputElement2">n/a</p>
+
+
+
+                <script>
+
+
+                function getInput() {
+                    var input = document.getElementById('exampleFormControlTextarea1').value;
+                    console.log(input);
+
+                    // display output onto dom
+                    $(function() {
+                     $( ".output" ).text(input);
+                    });
+
+                    var splitInput = input.split(" ");
+                    console.log(splitInput);
+                    checkPositive(splitInput);
+                    checkNegative(splitInput);
+
+                }
+
+                $('.submit').click(function(){
+                        getInput();
+                        console.log("Clicked");
+
+                });
+
+
+
+
+
+
+                </script>
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <!-- row 2 -->
+        <!-- <div class="row">
+            <a href="comfort.html">test</a>
+            <p>
+                Machine learning isn't something only engineers have to worry about. It's changing how we see things and how we interact, but for some people they don't know what's going on behind the screen.
+            </p>
+        </div> -->
+
+    </body>
+
+
+<!-- d3 script -->
+    <script>
+    function runD3(){
+
+
+
+    console.log("final data" + text_data);
+
+    var x = d3.scale.linear()
+        .domain([0, d3.max(text_data)])
+        .range([0, 600]);
+
+    d3.select(".chart")
+      .selectAll("div")
+        .data(text_data)
+      .enter().append("div")
+        .style("width", function(d) { return x(d) + "px"; })
+        .text(function(d) { return d; })
+        .on("mouseover", function(d) {d3.select(this).style("background-color", "gray");})
+        .on("mouseout", function(d) {d3.select(this).style("background-color", "steelblue");})
+
+
+    }
+
+    </script>
+
+</html>
