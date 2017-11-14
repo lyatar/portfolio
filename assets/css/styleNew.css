@@ -325,3 +325,44 @@ tr:after {
   margin: 1px;
   color: white;
 }
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    h5 {
+        float: left;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    h5 {
+        float: left;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    h5 {
+        float: left;
+    }
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    h5 {
+        float: left;
+    }
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+    h5 {
+        float: left;
+    }
+
+
+}
