@@ -30,6 +30,31 @@
 
 
 </head>
+<!-- d3 styles -->
+<style>
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+
+</style>
 
 <!-- body contents -->
 <body>
@@ -54,10 +79,10 @@
                 <li class="dropdown">
                   <a href="index.html#secondPage" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                      <li><a href="recoco.html">Reco-Co</a></li>
                       <li><a href="comfort.html">How Far from Comfort?</a></li>
-                      <li><a href="rebirth.html">RE:Birth UI</a></li>
                       <li><a href="twitter.html">Twitter Analysis</a></li>
+                      <li><a href="recoco.html">Reco-Co</a></li>
+                      <li><a href="rebirth.html">RE:Birth UI</a></li>
                       <li><a href="field-studies.html">Field Studies</a></li>
                       <li><a href="websites.html">Web Design</a></li>
                   </ul>
@@ -83,8 +108,10 @@
                      A twitter sentiment analysis that uses a variety of natural language processing tools and methods mapped alongside major storm weather data.<a href="https://github.com/lyatar/text-analysis-project">(link)</a></h4>
                 </div>
                 <div class="col col-lg-8" style="padding-top: 35px;">
+                    <p style="color: #666666; font-size: .9em"><b>10 Most Similar Words</i></b>
+                    <br>A diagram of the 10 most similar words in the corpus calculated using gensim. </p>
                     <div class="thumbnail">
-                        <img src="assets/img/ta2.png">
+                        <div id="chart"></div>
                     </div>
                     <p> </p>
                 </div>
@@ -96,7 +123,6 @@
                     <p>
                         Analyzing data is one of the first steps I take for any task and is important to my process. Before designing any data visualization or working with any data-related project, it's important for me to understand what "inputs" I might be working with. Therefore, it is crucial for me to understand what biases might come from any dataset and how data might be manipulated. Data analysis in this form is not typically thought of design, but it speaks to a lot of how I see things.
                     </p>
-
                 </div>
             </div>
 
@@ -365,9 +391,7 @@
                     <h4>Most Frequent Words</h4>
                     <p>
                         In addition, I did more explorations of the text using a DTM of the data set created using sci-kit learn.
-                        <div class="thumbnail">
-                            <img src="assets/img/tw9.png">
-                        </div>
+
                     </p>
                     <p>
                         <div class="thumbnail">
@@ -375,7 +399,10 @@
                         </div>
                         When we inspect the words used throughout the corpus we can see that obviously weather is the most frequent because we used the term "weather" to pull the tweets to look at. This method also pulled out "Mayweather" as well so we have tweets about the Mayweather and all of his fights mixed up in this (which is why fight and other fighters are prevalent in this text, but aside from that we words that generally describe the weather such as cold and rain. The top words are "great, good, like, love, perfect, beautiful, warm, hot, sunny, and loving" Generally we are seeing more positive words than I expected. We do get words like "cold, rain, bad, low, cooler, and snow, but from a glance, surprisingly, we see a lot more positivity.
                     </p>
-                    <h4>Euclidean Distances to find out How Similar Weather-grouped Tweets Were</h4>
+                    <div class="thumbnail">
+                        <img src="assets/img/tw7.png">
+                    </div>
+                    <h4>Euclidean Distances to find out How Similar Weather-grouped Tweets</h4>
                     <p class="specialBox">
 
                         <b>Distance between none and drought</b><br>
@@ -435,6 +462,8 @@
                 <div class="col col-lg-8" style="padding-top: 5px">
                     <p>If this analysis were to be done again, it would require better cleaning of the dataset (and more machine power). But in general, I think this research was good for exploring possibilities of when people might be prompted to talk start mentioning weather. I only looked for tweets that had the word weather, but it would have been better to use a dictionary that had terms used to describe the weather. In addition, using a weighted dictionary or a better sentiment analysis would make this analysis strong.</p>
                     <p>I hope that in the future, people will continue to use text analysis as a way to categorize and bring together different disciplines because it can add more dimensions to things we don't really think much about. The weather, it's always there and always changing, but it's hard to really consciously realize that it might be what's making you feel off. There are studies that say that yes extreme weather is doing this, but they always preempt people to talk about the weather, put people in isolated case studies and also how people feel about weather is also very subjective. Therefore, it's necessary to find a way, even if it's a little messy, that can analyse and allow us to look at what we have been doing and being able to separate ourself a little (which counting words does). But ulimtately, we have to re-insert our own opinions back to think if this makes sense and ultimately, these techniques are best for exploring.</p>
+
+
                 </div>
             </div>
 
@@ -444,5 +473,153 @@
 
 
             </div>
+
+    <!-- d3 script -->
+    <!-- https://bl.ocks.org/mbostock/4339083 -->
+    <script>
+
+    var margin = {top: 20, right: 120, bottom: 20, left: 120},
+        width = 960 - margin.right - margin.left,
+        height = 800 - margin.top - margin.bottom;
+
+    var i = 0,
+        duration = 750,
+        root;
+
+    var tree = d3.layout.tree()
+        .size([height, width]);
+
+    var diagonal = d3.svg.diagonal()
+        .projection(function(d) { return [d.y, d.x]; });
+
+    var svg = d3.select("#chart").append("svg")
+        .attr("width", width + margin.right + margin.left)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+    d3.json("flare.json", function(error, flare) {
+      if (error) throw error;
+
+      root = flare;
+      root.x0 = height / 2;
+      root.y0 = 0;
+
+      function collapse(d) {
+        if (d.children) {
+          d._children = d.children;
+          d._children.forEach(collapse);
+          d.children = null;
+        }
+      }
+
+      root.children.forEach(collapse);
+      update(root);
+    });
+
+    d3.select(self.frameElement).style("height", "800px");
+
+    function update(source) {
+
+      // Compute the new tree layout.
+      var nodes = tree.nodes(root).reverse(),
+          links = tree.links(nodes);
+
+      // Normalize for fixed-depth.
+      nodes.forEach(function(d) { d.y = d.depth * 180; });
+
+      // Update the nodes…
+      var node = svg.selectAll("g.node")
+          .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+      // Enter any new nodes at the parent's previous position.
+      var nodeEnter = node.enter().append("g")
+          .attr("class", "node")
+          .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+          .on("click", click);
+
+      nodeEnter.append("circle")
+          .attr("r", 1e-6)
+          .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+      nodeEnter.append("text")
+          .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
+          .attr("dy", ".35em")
+          .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+          .text(function(d) { return d.name; })
+          .style("fill-opacity", 1e-6);
+
+      // Transition nodes to their new position.
+      var nodeUpdate = node.transition()
+          .duration(duration)
+          .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+      nodeUpdate.select("circle")
+          .attr("r", 4.5)
+          .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+      nodeUpdate.select("text")
+          .style("fill-opacity", 1);
+
+      // Transition exiting nodes to the parent's new position.
+      var nodeExit = node.exit().transition()
+          .duration(duration)
+          .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+          .remove();
+
+      nodeExit.select("circle")
+          .attr("r", 1e-6);
+
+      nodeExit.select("text")
+          .style("fill-opacity", 1e-6);
+
+      // Update the links…
+      var link = svg.selectAll("path.link")
+          .data(links, function(d) { return d.target.id; });
+
+      // Enter any new links at the parent's previous position.
+      link.enter().insert("path", "g")
+          .attr("class", "link")
+          .attr("d", function(d) {
+            var o = {x: source.x0, y: source.y0};
+            return diagonal({source: o, target: o});
+          });
+
+      // Transition links to their new position.
+      link.transition()
+          .duration(duration)
+          .attr("d", diagonal);
+
+      // Transition exiting nodes to the parent's new position.
+      link.exit().transition()
+          .duration(duration)
+          .attr("d", function(d) {
+            var o = {x: source.x, y: source.y};
+            return diagonal({source: o, target: o});
+          })
+          .remove();
+
+      // Stash the old positions for transition.
+      nodes.forEach(function(d) {
+        d.x0 = d.x;
+        d.y0 = d.y;
+      });
+    }
+
+    // Toggle children on click.
+    function click(d) {
+      if (d.children) {
+        d._children = d.children;
+        d.children = null;
+      } else {
+        d.children = d._children;
+        d._children = null;
+      }
+      update(d);
+    }
+
+    </script>
+
         </body>
     </html>

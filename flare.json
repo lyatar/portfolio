@@ -1,0 +1,81 @@
+{
+ "name": "weather",
+ "children": [
+  {
+   "name": "hot",
+   "children": [
+    {"name": "summer","size": 4534},
+    {"name": "gloomy", "size": 5842},
+    {"name": "though", "size": 3432},
+    {"name": "makes", "size": 1041},
+    {"name": "bit", "size": 5176},
+    {"name": "miami", "size": 449},
+    {
+     "name": "autumn",
+     "children": [
+       {"name": "gloomy", "size": 1983},
+       {"name": "walk", "size": 2047},
+       {"name": "gorgeous", "size": 1375},
+       {"name": "chicago", "size": 8746},
+       {"name": "finally", "size": 2202},
+       {"name": "wonderful", "size": 1382},
+       {"name": "another", "size": 1629},
+       {"name": "bit", "size": 1675},
+       {"name": "long", "size": 2042},
+       {"name": "family", "size": 2042}
+     ]
+     },
+    {"name": "start", "size": 5534},
+    {"name": "feeling", "size": 9201},
+    {"name": "long", "size": 19975}
+   ]
+  },
+  {
+   "name": "cold",
+   "children": [
+       {"name": "makes", "size": 17010},
+       {"name": "hate", "size": 5842},
+       {
+        "name": "crazy", "size": 17010},
+       {
+        "name": "winter",
+        "children": [
+          {"name": "gets", "size": 1983},
+          {"name": "crazy", "size": 2047},
+          {"name": "sweater", "size": 1375},
+          {"name": "things", "size": 8746},
+          {"name": "thing", "size": 2202},
+          {"name": "change", "size": 1382},
+          {"name": "thinking", "size": 1629},
+          {"name": "since", "size": 1675},
+          {"name": "actually", "size": 2042},
+          {"name": "tired", "size": 2042}
+        ]
+        },
+       {"name": "soon", "size": 5176},
+       {"name": "really", "size": 449},
+       {"name": "supposed", "size": 5593},
+       {"name": "gets", "size": 5534},
+       {"name": "miami", "size": 9201},
+       {"name": "actually", "size": 19975}
+   ]
+},
+{
+ "name": "feeling",
+ "children": [
+     {"name": "bit", "size": 17010},
+     {"name": "gloomy", "size": 5842},
+     {
+      "name": "autumn","size": 3434
+     },
+     {"name": "almost", "size": 1041},
+     {"name": "chicago", "size": 5176},
+     {"name": "walk", "size": 449},
+     {"name": "long", "size": 5593},
+     {"name": "little", "size": 5534},
+     {"name": "running", "size": 9201},
+     {"name": "nice", "size": 19975}
+ ]
+}
+ ]
+}
