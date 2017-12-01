@@ -54,6 +54,13 @@ $(document).ready(function(){
         console.log("Card was clicked");
         });
 
+    $(".card").mouseover(function() {
+        $(this).find("p").css("display", "block");
+        $(this).find("img").css("opacity", "0.2");});
+    $(".card").mouseout(function() {
+        $(this).find("p").css("display", "none");
+        $(this).find("img").css("opacity", "1");});
+
 });
 
 // for top button
