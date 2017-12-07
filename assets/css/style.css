@@ -15,7 +15,6 @@ img.diagram {
     max-width: 900px;
     margin-left: 130px;
     float: left;
-
 }
 
 a {
@@ -144,6 +143,7 @@ p {
 
 }
 
+
 .paragraph-text {
     font-family: 'Fauna One', serif;
     float: left;
@@ -164,22 +164,30 @@ p {
 .header-text {
     float: left;
     text-align: left;
-	font-size: 30px;
-	margin: 20px 200px 5px 125px;
-	/*color: #385967;*/
+	  font-size: 30px;
+	  margin: 20px 200px 5px 125px;
+	  /*color: #385967;*/
     color: #395967;
     font-family: 'Playfair Display', serif;
 }
 
 .web-text {
-    float: left;
     text-align: left;
-	font-size: 30px;
+	  font-size: 30px;
     padding: 20px;
-	/*color: #385967;*/
     color: #395967;
     font-family: 'Playfair Display', serif;
 }
+
+.web-contain {
+  padding: 25px 0;
+  border: 0.1px solid #eee;
+  margin: 35px 10px;
+  border-radius: 5px;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+
+}
+
 
 .highlight {
     font-weight: 900;
@@ -437,8 +445,9 @@ a.footer-items:hover {
 	z-index: 21;
 	max-width: 90% !important ;
     max-height: 90% !important ;
-	top: 1%;
+	top: 10%;
 	right: 5%;
+
 }
 
 

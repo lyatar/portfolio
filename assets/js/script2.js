@@ -44,15 +44,17 @@ $(document).ready(function() {
 
     });
 
-    $(".diagram").click(function() {
-        $("#overlay").show();
-        $(this).addClass("pic-click");
-    });
-
-    $("#overlay").click(function() {
-        $(this).hide();
-        $(".diagram").removeClass("pic-click");
-    });
+    // $(".diagram").click(function() {
+    //     $("#overlay").show();
+    //     $(this).addClass("pic-click");
+    //     $('body').css("position", "fixed");
+    // });
+    //
+    // $("#overlay").click(function() {
+    //     $(this).hide();
+    //     $(".diagram").removeClass("pic-click");
+    //     $('body').css("position", "static");
+    // });
 
 });
 
