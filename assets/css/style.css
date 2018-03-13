@@ -155,6 +155,20 @@ p {
 
 }
 
+.summary-text {
+    margin: 50px
+}
+
+.paragraph-text-head {
+    font-family: 'Fauna One', serif;
+    float: left;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: #748a94;
+
+}
+
 .paragraph-texta {
     font-family: 'Fauna One', serif;
     color: #748a94;
@@ -590,6 +604,10 @@ a.footer-items:hover {
 
     .container {
         width: 100%
+    }
+
+    .summary-text {
+        margin: 0 5px
     }
 
 
