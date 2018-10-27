@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107943765-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107943765-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Using Twitter to Operate our Buildings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="assets/css/styleNew2.css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|PT+Serif|Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+
+<!-- body contents -->
+<body>
+<!-- navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Lauren Yatar</a>
+          </div>
+  
+          <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="index.html#secondPage" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="comfort.html">How Far from Comfort?</a></li>
+                    <li><a href="twitter.html">Twitter Analysis</a></li>
+                    <li><a href="recoco.html">Reco-Co</a></li>
+                    <li><a href="rebirth.html">RE:Birth UI</a></li>
+                    <li><a href="field-studies.html">Field Studies</a></li>
+                    <li><a href="websites.html">Web Design</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html#3rdPage">About/ Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+<!-- navigation end -->
+
+<!-- contents -->
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-4">
+                     <h1 style="font-size: 50px">
+                         <strong>Twitter Data and Building Operables</strong>
+                     </h1>
+                     <h4 style="line-height: 150%; font-size: 14px; margin-right: 30px">
+                        Can architecture and data be combined? How might we explore alternative ways of expressing data in a building? <br><a href="https://github.com/lyatar/python-playground/tree/master/Twitter%20Sentiment%20Testing">(For Raw Twitter Data Set & Etc.)</a>
+                     </h4>
+                </div>
+                <div class="col col-lg-8" style="padding-top: 35px;">
+                    <p style="color: #666666; font-size: .9em"><b>Operable Test</i></b>
+                    <br>A screenshot of how operables can change based on different ratios calculated using Grasshopper. </p>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/Pictures/44365109_2057063777677192_2912087581598416896_n.png" alt="blah">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Background/ Introduction</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        Parametric design is usually defined by quantitative factors based off geometry or the environment. But can a building be responsive to qualitative factors instead? Is there a way for a building to let people know what city citizens are feeling?
+                        <br><br>
+                        <div class="thumbnail">
+                        <img src="assets/img/arch.jpg">
+                    </div>
+                        We may have an answer! We now have access to user-generated data that tells us both where this information is coming from and what people are saying (i.e. tweets). With some data analysis of the text, we can quantify sentiment and find out what percentage of the responses are positive or negative. This project explores how a building can respond to a city’s sentiment and how weatherly conditions can override those conditions. Thus, we have created a system responsive to the city – both to its thoughts and its weatherly conditions.
+                        <br><br>
+                        After all, this is a “community” center.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Why is data like twitter so interesting? It has a geolocation.</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        In <a href="https://www.wiley.com/en-us/Data+Driven+Design+and+Construction%3A+25+Strategies+for+Capturing%2C+Analyzing+and+Applying+Building+Data-p-9781118898703">Data-Driven Design and Construction </a>, Randy Deutsch mentions how lots of information is geo-located. From this information we can gather what type of food people eat, how many people use a certain service, etc. The usefulness of this data is that it is immediate in comparison to the census which comes out every ten years. Though of course, there is a gap in the users as certain types of people use social media versus the census which collects data from people of all walks of life not just those with a smart phone. <br><br>
+                        
+                        It’s important to note that it is important to know the limitations of data and that all of these models of data mining are built with their own biases. Data cannot be the sole driver of the design process in your  project and there must be a middle ground. Therefore these tools must be adapted in a way for you to achieve what you want to achieve.
+                    </p>
+                    <div class="thumbnail">
+                        <img src="assets/img/tweetdiagrams.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Project Goals & Objectives</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        After research about how social media in currently used in architecture (research is included in thesis booklet) and about the site, Anaheim (a city which is trying to create a food and art community while this thesis strove to be the anti-thesis of the project). This inspired these goals for the project:
+                    </p>
+                    <h4 style="margin: 25px">
+                        <ol style="line-height: 200%">
+                            <li>Building is to hold both user-generated information and “user-generated” intents.</li>
+                            <li>Establish a local network between the information collected and Community Center.</li>
+                            <li>Information is the informer.</li>
+                            <li>Social media as more than discourse.</li>
+                            <li>About the present instead of the past.</li> 
+                        </ol>
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Process</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Site Explorations</h4>
+                    <p>
+                        Early processes dived into a mix of looking at twitter data, data from the city, and also historical research about the city of Anaheim. This is to be expressed through diagramming, graphical representations, written analysis, and modeling.
+                    </p>
+                    <div class="thumbnail">
+                        <img src="assets/img/arch/Pictures/thesis/thesisdrawing.jpg">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="assets/img/arch/Pictures/thesis/Screen Shot 2018-09-13 at 6.59.39 PM.png">
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Using Twitter Data to Analyze the Site</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        The process of this thesis deviates from the normal architecture process as it places emphasis on the potential algorithm building. This project lays more along the lines of a responsive architecture more than a display of social media information (though this lies between both boundaries).
+                        <br><br>
+                        In addition, it is important to look at what information can be used. An exploration of text analysis methods and how the tweets were processed were put into consideration in the design.
+                        <br><br>
+                        Therefore, early steps take on a “computational basis” and such techniques must be explained as they deviate from typical architectural knowledge.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong></strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Example of How the Data Set was Separated in Positive/ Negative Tweets</h4>
+                    <p>
+                        In order to operate the building, twitter data had to be analyzed and separated into a number that could then be chugged into the building. This was done via python by filtering tweets for how positive or negative they were based on how many words were positive and negative. 
+                    </p>
+                    <table class="table table-hover table-bordered table-responsive">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>text</th>
+                              <th>text_token</th>
+                              <th>tokens_pos</th>
+                              <th>pos_count</th>
+                              <th>pos_count_prop</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">0</th>
+                              <td>Not boring! Sounds pretty awes...</td>
+                              <td>[@, beautyandbeets, not, boring, !, sounds, pr...</td>
+                              <td>[pretty, awesome]</td>
+                              <td>2</td>
+                              <td>0.153846</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Excited to see how these young men use these n...</td>
+                                <td>[excited, to, see, how, these, young, men, use...</td>
+                                <td>[excited]</td>
+                                <td>1</td>
+                                <td>0.045455</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Wow. Just wow. </td>
+                                <td>[wow, ., just, wow, ., ]</td>
+                                <td>[wow, just, wow ] </td>
+                                <td>1</td>
+                                <td>0.071429</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Formula to Determine Number of Openings</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Percent of Positive Tweets per Location x Operables in Location</h4>
+                    <p>
+                        In many ways, the ultimate goal of this project is to create a vessel for the tweets. Now that we have a number from the tweets we can now use that number as a parameter and input into the building. This was first done using Grasshopper and Rhinoceros 5.0. The grasshopper file was set up so that only the percentage would need to be changed. Openings were to be calculated randomly. From there we have three sample cases.
+                    </p>
+                    <div class="thumbnail">
+                        <img src="assets/img/arch/Pictures/thesis/diagram.png">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Building Expressing Community's Sentiment</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Openings = Percent of Positive Tweets per Location x Operables in Location</h4>
+                    <p>
+                        In many ways, the ultimate goal of this project is to create a vessel for the tweets. Now that we have a number from the tweets we can now use that number as a parameter and input into the building. This was first done using Grasshopper and Rhinoceros 5.0. The grasshopper file was set up so that only the percentage would need to be changed. Openings were to be calculated randomly. From there we have three sample cases.
+                    </p>
+                    <h4>Case 1: 0% Positive Tweets</h4>
+                    <div class="thumbnail">
+                        <img src="assets/img/arch/Pictures/thesis/4a.jpg">
+                    </div>
+                    <h4>Case 2: 60% Positive Tweets - Full Body Randomized/ 60% Open Openings</h4>
+                    <div class="thumbnail">
+                        <img src="assets/img/arch/Pictures/thesis/1a.jpg">
+                    </div>
+                    <h4>Case 3: 100% Positive Tweets</h4>
+                    <div class="thumbnail">
+                        <img src="assets/img/arch/Pictures/thesis/6a.jpg">
+                    </div>
+                    <h4>Stage 1 Programming Suggestions</h4>
+                    <div class="thumbnail">
+                        <img src="assets/img/arch/Pictures/thesis/p01.png">
+                    </div>
+                    <h4>Stage 1 Schematic Plans and Sections</h4>
+                    <div class="thumbnail">
+                        <img src="assets/img/arch/Pictures/thesis/p02.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Proposition</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        The simple goal is to produce a building that responds to what people are saying about the area via social media (or a combination of social medias if our engineer is amazing) and interpret that information using some form of sentiment analysis that categorizes the information into positive/ negative data and convert this data into a percentage. We need to get our text into a form an algorithm can understand.
+                        <div class="thumbnail">
+                            <img src="assets/img/arch/Pictures/thesis/1924happysun.png">
+                        </div>
+                        
+                        In addition, because this is a building, weather is important, so we are also looking into how that data can affect our building.
+                        <br><br>
+                        The facade panels, upper floor plates, and the roof are all positioned (as in open or closed) based off of the sentiment percentage and are held into that position until an update is initiated (decided by our almighty building controller).
+                        <br><br>
+                        A simple way to think of this is that each type of opening is a variable and the percentage is applied to each variable. Floor panels are removed from the middle so that any second-floor space has access to a staircase. Anyone who desires to use or go up the second floor must sign a safety waiver that says something along the lines of they will use the space responsibly and follow safety instructions (we don’t want to get sued). For users who feel the need for control, the middle partitions on the first floor (see section) can pushed and locked into a desire place.
+                        <br><br>
+                        <div class="thumbnail">
+                            <img src="assets/img/arch/Pictures/thesis/section 2[Converted]_Page_2.png">
+                        </div>
+                    </p>
+    
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Conclusions</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>What does this building add to the community?</h4>
+                    <p>It creates a new <b>network.</b> <br><br>The local culture would be the ones building this architecture and the community is more involved in the make up of this building. This building could demonstrate some of the peculiarities of a network (like when they are feeling a certain way). Since we have simply developed the vessel for this data, any type of social media that has the three qualities I specified earlier could be input into this building. We could see the difference between the local twitter community versus the local reddit community. We could have different social media days. While inhabiting the building, you would always be somewhat aware of what the social media community is thinking and you can see the effects it has on your own experience.
+                    </p>
+                    <p>
+                        <br><br><br><br><br>
+                    </p>
+                </div>
+            </div>
+
+    <!-- footer -->
+    <!-- back to top button -->
+            <div id="back-to-top"><a href="#top">Top</a></div>
+
+
+            </div>
+
+
+        </body>
+    </html>

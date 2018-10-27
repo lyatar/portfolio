@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107943765-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107943765-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lauren Yatar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="assets/css/styleNew2.css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|PT+Serif|Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+
+<!-- body contents -->
+<body>
+<!-- navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Lauren Yatar</a>
+          </div>
+  
+          <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="index.html#secondPage" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="comfort.html">How Far from Comfort?</a></li>
+                    <li><a href="twitter.html">Twitter Analysis</a></li>
+                    <li><a href="recoco.html">Reco-Co</a></li>
+                    <li><a href="rebirth.html">RE:Birth UI</a></li>
+                    <li><a href="field-studies.html">Field Studies</a></li>
+                    <li><a href="websites.html">Web Design</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html#3rdPage">About/ Contact</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+<!-- navigation end -->
+
+<!-- contents -->
+    <div class="container">
+            <div class="row">
+                <div class="col col-lg-4">
+                     <h1 style="font-size: 50px">
+                         <strong>Twitter Data and Extreme Storm Weather</strong>
+                     </h1>
+                     <h4 style="line-height: 150%; font-size: 14px; margin-right: 30px">
+                     A twitter sentiment analysis that uses a variety of natural language processing tools and methods mapped alongside major storm weather data.<a href="https://github.com/lyatar/text-analysis-project">(link)</a></h4>
+                </div>
+                <div class="col col-lg-8" style="padding-top: 35px;">
+                    <p style="color: #666666; font-size: .9em"><b>10 Most Similar Words</i></b>
+                    <br>A diagram of the 10 most similar words in the corpus calculated using gensim. </p>
+                    <div class="thumbnail" >
+                        <div id="chart"></div>
+                    </div>
+                    <p> </p>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>The Importance of Understanding Data</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        Analyzing data is one of the first steps I take for any task and is important to my process. Before designing any data visualization or working with any data-related project, it's important for me to understand what "inputs" I might be working with. Therefore, it is crucial for me to understand what biases might come from any dataset and how data might be manipulated. Data analysis in this form is not typically thought of design, but it speaks to a lot of how I see things.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Background & Objectives</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        Throughout this seminar, we explored a variety of textual analysis techniques using python that are used in the digital humanities and by social scientists. At the same time, I was also working on my architecture thesis where I was working on how to incorporate twitter data into buildings (note: the methods and techniques between this and my thesis align, but the datasets and overall goals differ). This inspired these questions:
+                    </p>
+                    <h4 style="margin: 25px">
+                        <ol style="line-height: 200%">
+                            <li>Is there a connection between the weather and a tweet's sentiment?</li>
+                            <li>Can you link two disparate data sets and find meaningful information?</li>
+                            <li>Which computational methods are best for this type of textual analysis and what are some of the limitations?</li>
+                        </ol>
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Datasets</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Twitter Corpus</h4>
+                    <p>
+                        The corpus I will be exploring is a set of scraped public twitter updates that were used by <i>Cheng, Caverlee, and Lee</i> in their <a href="https://archive.org/details/twitter_cikm_2010">"You Are Where You Tweet Study: A Content-Based Approach to Geo-locating Twitter Users"</a> paper. The corpus provides both a training and test set of tweets collected from September 2009 to January 2010. The training set contains 115,886 Twitter users and 3,844,612 updates from the users and all of the locations are self-labeled. The test set contains 5,136 Twitter users and 5,156,047 tweets from users and the locations are uploaded from their smart phones using the form of "UT:Latitude, Longitude."
+                    </p>
+                    <h4>Extreme Storm Events Database (NOAA)</h4>
+                    <p>
+                        The National Centers for Environmental Information from the National Oceanic and Atmospheric Administration (NOAA) has an <a href="https://www.ncdc.noaa.gov/stormevents/">online database of storm events</a>. From the online database, they state that the database contains records documenting:
+                    </p>
+                    <p style="margin: 10px">
+                        <ol style="line-height: 200%">
+                            <li>The occurrence of storms and other significant weather phenomena having sufficient intensity to cause loss of life, injuries, significant property damage, and/or disruption to commerce;</li>
+                            <li>Rare, unusual, weather phenomena that generate media attention, such as snow flurries in South Florida or the San Diego coastal area; and</li>
+                            <li>Other significant meteorological events, such as record maximum or minimum temperatures or precipitation that occur in connection with another event.</li>
+                        </ol>
+                    </p>
+                    <p>It currently contains data from January 1950 to January 2017. For this study, I will be pulling the records from January 2008 - December 2009 (the time period that matches the time period of the tweets). As for the location of these storms, the database only contains the State.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Cleaning the Twitter Corpus</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        In this section I will go over what pieces of the corpus will be used for this research and what was done to clean and merge the two data sets. There were many challenges in combining these two data and these variables have an effect on how to view the results as a whole, so it is important to be aware of the limitations and biases in this corpus.
+                    </p>
+                    <p>Due to the largeness of this twitter set and lack of computational power, I will only be using a small subset of the twitter corpus to test and am aware of how this may be limiting to my findings. However, this too is only a small subset of tweets during a short period of time. In a further research, to better test my hypothesis, tweets from throughout the year (January - December) and from many different years would better (this would require a different twitter data set).</p>
+                    <p>How the corpus is set up, the list of users and location are separated from their tweets (since in the corpus some of the users have multiple. The training set of user locations are self-labeled so this creates a lack of consistency in the labeling. The second set, has longtiude and latitude coordinates. In an ideal case, I would use a package such as <a href="https://geopy.readthedocs.io/en/1.11.0/">geopy</a> which would convert the longitude and latitude coordinates into an object that would contain an address and from there I would be able to pull the state (however, this requires a lot of time to run through the list and would require further muddling with separating the address into a json and extracting the state).</p>
+                    <p>For a more detailed look, see the jupyter notebook <a href="https://github.com/lyatar/text-analysis-project/blob/master/yatar_finalproject.ipynb">here</a>.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Data Cleaning Challenges</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Adjusting the Data Set and a Lack of Computational Power</h4>
+                    <p>To get the Twitter Corpus into a usable form to be matched with the Storm Events Database, I need the state and a time period. Not all of the self-reported twitter locations contain states and many of them only contain a city. In addition for some pieces that do contain the state name, it may be written as an abbreviation (CA) or in full (California). Again, due to the inconsistencies and lack of computational available on the machinery being used to complete this task, the user's city name is pulled and that is to be matched to its corresponding state (this is done by comparing the city to a spreadsheet that provides the state and city name). The problem with this method is that cities with the same name exist in different states and matching in this fashion can either produce the same user being repeated in the same set for each state (which would increase their influence because they would be overrepresented) or a user being matched into the wrong state. This issue can be solved by using longitude and latitude. Because the corpus separates the user/location from the tweets, this requires us to match all of the users to a state before we can rematch them to their tweets. The size of users is unfortunately more than my machine can handle which is why I have resorted to this method.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong></strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>The Cleaned Data Set</h4>
+                    <p>Cleaning the data and combining the two different data sets was one of the biggest challenges and took up a majority of the time, but it allowed me to understand the data set I was working with.
+                    </p>
+                    <table class="table table-hover table-bordered table-responsive">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>user</th>
+                              <th>STATE</th>
+                              <th>tweet</th>
+                              <th>timestamp</th>
+                              <th>weather_type</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">0</th>
+                              <td>246</td>
+                              <td>california</td>
+                              <td>yes! Do you mean the good weather ea...</td>
+                              <td>2009-11-06 17:28:37</td>
+                              <td>Drought</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>246</td>
+                                <td>california</td>
+                                <td>I know three things to be true: SF weather is ...</td>
+                                <td>2009-11-03 19:07:03	</td>
+                                <td>Drought</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>89</td>
+                                <td>california</td>
+                                <td>Colder weather is kind of exciting, except for...</td>
+                                <td>2009-11-06 17:28:37</td>
+                                <td>Drought</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>89</td>
+                                <td>california</td>
+                                <td>Did anyone tell the weather it's november?</td>
+                                <td>2009-11-03 16:07:24</td>
+                                <td>Drought</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>246</td>
+                                <td>california</td>
+                                <td>that's METARspeak for "nice weather"</td>
+                                <td>2009-11-08 13:53:29</td>
+                                <td>Drought</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>246</td>
+                                <td>california</td>
+                                <td>Headed to Oakland soon, where the weather is K...</td>
+                                <td>2009-11-08 13:52:09</td>
+                                <td>Drought</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Analyzing the Data Set</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>In the Dataset Most of Tweets are labeled "None" or "Drought"</h4>
+                    <p>In this dataset, we se that most of the tweets have no extreme weather. The second most popular extreme weather is a drought, followed by wildfire.
+                    </p>
+                    <div class="thumbnail">
+                        <img src="assets/img/tw1.png">
+                    </div>
+                    <h4>A Large Representation of Tweets from Texas, California, and New York</h4>
+                    <p>There is a large representation of tweets from Texas. California and New York come in second and third. They also have large populations. This is very interesting becaues in previous studies of this data set when I looked at small subsets of tweets (like 50,000) instead of just tweets that contain the word "weather", California was dispropotionally over represented and had a lot more than Texas.</p>
+                    <div class="thumbnail">
+                        <img src="assets/img/tw2.png">
+                    </div>
+                    <h4>Grouped By State & Extreme Storms</h4>
+                    <p>This graph combines both of the information. We can see that the tweets from California were all during the drought for the most part as well as Texas and even Utah. A lot of the tweets divided by states are not during an extreme weather event. A problem with this graph is the limited color options that matplotlib uses</p>
+                    <div class="thumbnail">
+                        <img src="assets/img/tw3.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Tokenizing Text</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>A Hand-driven Approach</h4>
+                    <p>The main technique I will be using to test for the twitter sentiment is by using a dicionary of positive and negative words. This <a href="https://github.com/jeffreybreen/twitter-sentiment-analysis-tutorial-201107">dictionary</a> was created by Jeffrey Breen for twitter sentiment analysis.</p>
+                    <p>From there I plan to sort tweets into positive and negative categories and further compare between the two.</p>
+                    <p>Using a dictionary and counting the number of words for sentiment analysis suits this case because we are looking for things that hint at a sentiment. However, as a caution, some of the negative words in already have weather attached, such as rainy.
+                    </p>
+                    <div class="thumbnail">
+                        <img src="assets/img/ml.png">
+                    </div>
+                    <p style="font-size: .8em;">Image from <i>Schwartz, H. Andrew et al. “Data-Driven Content Analysis of Social Media: A Systematic Overview of Automated Methods.</i>”</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Data Cleaning Challenges</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Adjusting the Data Set and a Lack of Computational Power</h4>
+                    <p>To get the Twitter Corpus into a usable form to be matched with the Storm Events Database, I need the state and a time period. Not all of the self-reported twitter locations contain states and many of them only contain a city. In addition for some pieces that do contain the state name, it may be written as an abbreviation (CA) or in full (California). Again, due to the inconsistencies and lack of computational available on the machinery being used to complete this task, the user's city name is pulled and that is to be matched to its corresponding state (this is done by comparing the city to a spreadsheet that provides the state and city name). The problem with this method is that cities with the same name exist in different states and matching in this fashion can either produce the same user being repeated in the same set for each state (which would increase their influence because they would be overrepresented) or a user being matched into the wrong state. This issue can be solved by using longitude and latitude. Because the corpus separates the user/location from the tweets, this requires us to match all of the users to a state before we can rematch them to their tweets. The size of users is unfortunately more than my machine can handle which is why I have resorted to this method.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Tokenizing</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Calculating the Positive/Negative Sentiment of a Tweet</h4>
+                    <p>This was done by tokenizing the tweets and counting for the amount of positive and negative words. The tweet was categorized as negative if the proportion of negative words was greater than negative.
+                    </p>
+                    <div class="thumbnail">
+                        <img src="assets/img/tw8.png">
+                    </div>
+                    <!-- table -->
+                    <table class="table table-hover table-bordered table-responsive">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>tweet</th>
+                              <th>weather_type</th>
+                              <th>pos_sentiment</th>
+                              <th>pos_sentiment_no_stop</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">0</th>
+                              <td>yes! Do you mean the good weather ea...</td>
+                              <td>Drought</td>
+                              <td>True</td>
+                              <td>True</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>I know three things to be true: SF weather is ...</td>
+                                <td>Drought</td>
+                                <td>True</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Colder weather is kind of exciting, except for...</td>
+                                <td>Drought</td>
+                                <td>True</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Did anyone tell the weather it's november?</td>
+                                <td>Drought</td>
+                                <td>True</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>that's METARspeak for "nice weather"</td>
+                                <td>Drought</td>
+                                <td>True</td>
+                                <td>True</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Headed to Oakland soon, where the weather is K...</td>
+                                <td>Drought</td>
+                                <td>False</td>
+                                <td>False</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    <!-- table end -->
+                <h4>Mostly Positive Tweets, But Difference isn't Too Big</h4>
+                <div class="thumbnail">
+                    <img src="assets/img/tw5.png">
+                </div>
+                <p>
+                    True corresponds to positive sentiment. In general we see more positive tweets. The proportion of positive to negative aren't too drastic from one another.
+                </p>
+                <div class="thumbnail">
+                    <img src="assets/img/tw6.png">
+                </div>
+                <p>For drought and none we see that the same trend that we saw in the states remains. For the categories that have less than 100 tweets, we see that there are cases of more negative tweets. For the ones that have more negative than positive tweets we see heavy rain as having significantly more. Interestingly, heavy rain is one of the few that seems to fall under this trend and rain is one of the situations where we are most likely to feel sad because of the weather according to studies. Winter weather also has more negative tweets as well as high wind. High wind has more negative tweets but strong wind does not. Those tweets are small so we would have to look at those closely to really see what it's about.</p>
+                <h4>How many more positive than negative?</h4>
+                <p>Right now we only have positive or negative (no neutral). To test what we see in the graphs, we will further check to see if in the per weather category if there are more positive tweets than negative tweets.<br><br>
+                Using the below formula:</p>
+                <p class="specialBox" style="font-size: 1.2em;">positive/#total - #negative/total</p>
+                <h4>More Negative Tweets in Extreme Weather?</h4>
+                <p>I chose a select few to take a look at. We can see in the "all", which looks at all of tweets that the difference between positive/negative isn't that large, but for more extreme weather such as heavy rain, winter weather, and excessive heat we see more negative tweets. It's interest to see that winter weather and extreme heat both have portionally more negative tweets despite being two temperatures. This supports the idea that extreme weather affects what people are tweeting about based only on these proportions.</p>
+                <div class="thumbnail">
+                    <img src="assets/img/ta2.png">
+                </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Document Term Matrix</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <h4>Most Frequent Words</h4>
+                    <p>
+                        In addition, I did more explorations of the text using a DTM of the data set created using sci-kit learn.
+
+                    </p>
+                    <p>
+                        <div class="thumbnail">
+                            <img src="assets/img/tw9.png">
+                        </div>
+                        When we inspect the words used throughout the corpus we can see that obviously weather is the most frequent because we used the term "weather" to pull the tweets to look at. This method also pulled out "Mayweather" as well so we have tweets about the Mayweather and all of his fights mixed up in this (which is why fight and other fighters are prevalent in this text, but aside from that we words that generally describe the weather such as cold and rain. The top words are "great, good, like, love, perfect, beautiful, warm, hot, sunny, and loving" Generally we are seeing more positive words than I expected. We do get words like "cold, rain, bad, low, cooler, and snow, but from a glance, surprisingly, we see a lot more positivity.
+                    </p>
+                    <div class="thumbnail">
+                        <img src="assets/img/tw7.png">
+                    </div>
+                    <h4>Euclidean Distances to find out How Similar Weather-grouped Tweets</h4>
+                    <p class="specialBox">
+
+                        <b>Distance between none and drought</b><br>
+                        1532.70675604<br><br>
+
+                        <b>Distance between none and flood</b><br>
+                        4194.91632813<br><br>
+
+                        <b>Distance between none and wildfire</b><br>
+                        4290.91528698<br><br>
+
+                        <b>Distance between drought and wildfire</b><br>
+                        2842.30610596<br><br>
+
+                        <b>Distance between drought and flood</b><br>
+                        2751.99509447<br><br>
+
+                        <b>Distance between none and heavy rain</b><br>
+                        4401.52723495<br><br>
+
+                        <b> Distance between none and winter storms</b><br>
+                        4449.65133466<br><br>
+
+                        <b>Distance between none and high winds</b><br>
+                        4452.62169963<br><br>
+
+                        <b>Distance between none and extreme heat</b><br>
+                        4461.77341424<br><br>
+
+                        <b>Distance between winter storms and extreme heat</b><br>
+                        25.5538646784<br><br>
+
+                        <b>Distance between extreme heat and drought</b><br>
+                        3014.70164361<br>
+                    </p>
+                    <p>Just testing a few of these for their euclidean distance, we can see that comparing the "none" tweets (tweets when there is no extreme weather) to these select extreme weathers, we see the greatest distance when looking at storm events that produce more simuli (rain,snow, wind, more heat) than drought. In addition, when we look at the distance between winter storms and extreme heat, it is very small even though the weather conditions are quite different. Looking at extreme heat and drought, which both suggest hot weather we still see a large difference.</p>
+
+                    <p>From this, it further suggests that it is not really a matter of being cold, but that the weather is extreme or different from the norm.</p>
+
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Conclusions</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>Because of the messiness of this dataset, it's hard to draw any real conclusions of whether people are tweeting more positively about weather during specific storm events. Looking at the tweets more generally, shows us that there are generally more positive tweets when the word "weather" is mentioned. Based off of the grouping of sentiment, we see that the proportion of positive tweets to negative tweets is decreased in cases of extreme weather (graph is revisited below). This goes to show that it's most likely that extreme weather does in some ways cause people to write more about the weather negatively. However, we see that the total number of tweets about the weather during an extreme storm versus none isn't that much different which goes to say we probably see weather at a smaller and less global level. This is probably why drought tweets don't sound as drastic because it's hard to observe a drought than something like heavy rain.</p>
+                    <p>When we look at the other graph of the words used throughout the document, we see that the most frequent words are positive and talk about good weather. In the Word2Vec, it drew out that the words most similar to weather are describing the time of the day (like the morning), but in looking more closely at hot and cold, hot is most similar with summer and fall and cold is with winter (as for seasons). This twitter set contains tweets from fall to winter so this makes sense. Cold has has 'hate' and 'crazy' while Hot has 'gloomy' as its second most similar word. But when you look at autumn (which has hot temperatures depening on where you live) you see that it gives off a mixed feeling as it's "gloomy, gorgeous, and beautiful."</p>
+                    <p>Mixing datasets is a messy task because it's not clear if you're seeing real connections, but from these analyses we can see that there is some connection between extreme weather and negativity because when we dive the tweets into extreme weather versus the "none" we start to see more negativity and polarity. When we look at the tweets as a whole, we see that the top words are mostly positive which I did not expect, but rethinking about it, a lot of people tend to take notice of when the weather is good and tweet about when it's a perfect day to be outside. This is why we have a lot of positive tweets.</p>
+                    <p>In general, people tend to tweet about things they feel have an effect on them.</p>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Possible Further Analysis</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>If this analysis were to be done again, it would require better cleaning of the dataset (and more machine power). But in general, I think this research was good for exploring possibilities of when people might be prompted to talk start mentioning weather. I only looked for tweets that had the word weather, but it would have been better to use a dictionary that had terms used to describe the weather. In addition, using a weighted dictionary or a better sentiment analysis would make this analysis strong.</p>
+                    <p>I hope that in the future, people will continue to use text analysis as a way to categorize and bring together different disciplines because it can add more dimensions to things we don't really think much about. The weather, it's always there and always changing, but it's hard to really consciously realize that it might be what's making you feel off. There are studies that say that yes extreme weather is doing this, but they always preempt people to talk about the weather, put people in isolated case studies and also how people feel about weather is also very subjective. Therefore, it's necessary to find a way, even if it's a little messy, that can analyse and allow us to look at what we have been doing and being able to separate ourself a little (which counting words does). But ulimtately, we have to re-insert our own opinions back to think if this makes sense and ultimately, these techniques are best for exploring.</p>
+
+
+                </div>
+            </div>
+
+    <!-- footer -->
+    <!-- back to top button -->
+            <div id="back-to-top"><a href="#top">Top</a></div>
+
+
+            </div>
+
+
+        </body>
+    </html>
