@@ -1,148 +1,173 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107943765-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107943765-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-107943765-1');
-</script>
+    gtag('config', 'UA-107943765-1');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Integrated Building Studio</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css" />
-    <link href="https://fonts.googleapis.com/css?family=Fauna+One|PT+Sans|Playfair+Display" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+    <title>Food Building</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>'
-    <script src = "assets/js/script2.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/styleNew2.css" >
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display|PT+Serif|Lato" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
+
+<!-- body contents -->
 <body>
+    <!-- navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Lauren Yatar</a>
+        </div>
 
-    <!-- header and footer -->
-<!-- navigation -->
-<nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">Lauren Yatar</a>
-          </div>
-  
-          <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="index.html#secondPage" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="comfort.html">How Far from Comfort?</a></li>
-                    <li><a href="twitter.html">Twitter Analysis</a></li>
-                    <li><a href="recoco.html">Reco-Co</a></li>
-                    <li><a href="rebirth.html">RE:Birth UI</a></li>
-                    <li><a href="field-studies.html">Field Studies</a></li>
-                    <li><a href="websites.html">Web Design</a></li>
-                </ul>
-              </li>
-              <li><a href="index.html#3rdPage">About/ Contact</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
-  <!-- navigation end -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="arch.html">Architecture</a></li>
+            <li class="dropdown">
+              <a href="index.html#secondPage" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                  <li><a href="comfort.html">How Far from Comfort?</a></li>
+                  <li><a href="twitter.html">Twitter Analysis</a></li>
+                  <li><a href="recoco.html">Reco-Co</a></li>
+                  <li><a href="rebirth.html">RE:Birth UI</a></li>
+                  <li><a href="field-studies.html">Field Studies</a></li>
+                  <li><a href="websites.html">Web Design</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#3rdPage">About/ Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+<!-- navigation end -->
 
-
-<!-- sections -->
-
-<!-- <div id="fullpage">
-    <div class="section" id="section1a">
-
-        <div class="inner">
-
-            <div class="clear"></div>
-            <div class="subtitle-text">
-                People who are stressed use stress wearables to track their stress, but many of these are seen as being kind of nerdy and are highly obvious. They don't attract people who aren't into tech or health. My mission was to design both a wearable and matching UI that would turn stress into something positive. Can you re:set your stress levels?
+<!-- contents -->
+    <div class="container">
+            <div class="row">
+                <div class="col col-lg-4">
+                     <h1 style="font-size: 50px">
+                         <strong>Food Building</strong>
+                     </h1>
+                     <h4 style="line-height: 150%; font-size: 14px; margin-right: 30px">
+                     <i>Arch 203 - Integrated Building Studio, Fall 2016</i>
+                     A Food Building that Combines Dining, Food Prep, and Food Growing. </h4>
+                </div>
+                <div class="col col-lg-8" style="padding-top: 35px;">
+                    <p style="color: #666666; font-size: .9em"><b>Food Building</i></b>
+                    <br> Individual Project Elevations</p>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/2048 2024 elevation.png">
+                    </div>
+                    <p> </p>
+                </div>
             </div>
-            <img src="assets/img/down-arrow.svg"  class ="arrow bobbing">
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Concept</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        This building is organized in such a manner that the workers, those who work in the kitchens and in the farms, are able to access the urban space easily to distribute their products, but at the same time, the spaces are not easily accessible to the public because it would be quite difficult to be producing five hundred pastries while curious customers are zooming around in your space. 
+                        <br><br>
+                        To make this happen, circulation is pushed to towards the back, near the east, while there are two entrances for customers, one in the west and one south. Customers circulate in a circular manner around the food booths like a cafeteria line with seating on the outskirts. While the overall building favors the west as a front, at the ground level, both entrances have an equal importance – food booths face the west and the information desk greets the south. Since the shops are temporary, the column grid acts as a grid marking, so that shops can know the coordinates of where they are positioned. Everything can change and even the panelized system can eventually be rearranged. The absence of cladding signifies where windows and doors are, but this holds no permanence. Everyone is just a tenant of this building and holds no ownership. 
+                    </p>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/Screen Shot 2018-10-30 at 8.19.04 PM.png">
+                        <p style="color: #666666; font-size: .9em">
+                        An early sketch of laying out the differing mechanical and facade systems.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Stacked Ventilation for Cooling </strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        To make this happen, circulation is pushed to towards the back, near the east, while there are two entrances for customers, one in the west and one south. Customers circulate in a circular manner around the food booths like a cafeteria line with seating on the outskirts. While the overall building favors the west as a front, at the ground level, both entrances have an equal importance – food booths face the west and the information desk greets the south. Since the shops are temporary, the column grid acts as a grid marking, so that shops can know the coordinates of where they are positioned. 
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/termalpro [Converted].png">
+                        <p style="color: #666666; font-size: .9em">
+                        Diagram of natural ventilation and heating needs per programmatic area.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Fiber Cement Panels for Easy Re-Arrangement </strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>
+                        Everything can change and even the panelized system can eventually be rearranged. The absence of cladding signifies where windows and doors are, but this holds no permanence. Everyone is just a tenant of this building and holds no ownership. 
+                    </p>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/sizes.png">
+                    </div>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/yatar_lauren_specs.png">
+                        <p style="color: #666666; font-size: .9em">
+                        Example of sample specs for the panels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Drawings</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/3640special.png">
+                    </div>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/3640 section elevation2 [Converted].png">
+                    </div>
 
-        </div>
-        <div class="inner">
-            <img src="assets/img/test3.png"  class ="main-img">
-        </div>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/4024 sections.png">
+                    </div>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/363 36200plans.png">
+                    </div>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/363 36200plans2.jpg">
+                    </div>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/2048 2024 elevation2.jpg">
+                    </div>
+                    <div class="thumbnail" >
+                        <img src="assets/img/arch/IMG_3270.jpg">
+                    </div>
+                </div>
+            </div>
 
 
-    </div>
+            <div class="row">
+                <div class="col col-lg-4"> <h5><strong>Conclusions</strong></h5><br><hr></div>
+                <div class="col col-lg-8" style="padding-top: 5px">
+                    <p>.</p>
+                </div>
+            </div>
 
-</div> -->
-
-<!-- end of full, page, content start -->
-<div class="content">
-
-    <div id="overlay">
-        <!-- <img class="button" id="close" src="close.png"> -->
-    </div>
-
-    <div class="title-text">Integrated Building Studio - Food Building</div>
-    <div class="clear"></div>
-    <img src="assets/img/arch/3640special.png"  class ="diagram">
+    <!-- footer -->
+    <!-- back to top button -->
+            <div id="back-to-top"><a href="#top">Top</a></div>
 
 
-    <div class="clear"></div>
-    <div class="header-text">
-            Concept
-    </div>
-    <div class="paragraph-text">
-        <br>
-        This building is organized in such a manner that the workers, those who work in the kitchens and in the farms, are able to access the urban space easily to distribute their products, but at the same time, the spaces are not easily accessible to the public because it would be quite difficult to be producing five hundred pastries while curious customers are zooming around in your space. To make this happen, circulation is pushed to towards the back, near the east, while there are two entrances for customers, one in the west and one south. Customers circulate in a circular manner around the food booths like a cafeteria line with seating on the outskirts. While the overall building favors the west as a front, at the ground level, both entrances have an equal importance – food booths face the west and the information desk greets the south. Since the shops are temporary, the column grid acts as a grid marking, so that shops can know the coordinates of where they are positioned. Everything can change and even the panelized system can eventually be rearranged. The absence of cladding signifies where windows and doors are, but this holds no permanence. Everyone is just a tenant of this building and holds no ownership. 
-    </div>
-
-    <div class="header-text">
-        Drawings
-    </div>
-    <!-- <img src="assets/img/arch/2048 2024 elevation2.jpg"  class ="diagram"> -->
-    <div class="paragraph-text">
-    </div>
-    
-    <div class="clear"></div>
-    <img src="assets/img/arch/Pictures/arch 203/3640 section elevation2 [Converted].png"  class ="diagram">
-    <img src="assets/img/arch/2048 2024 elevation.png"  class ="diagram">
-    <img src="assets/img/arch/4024 sections.png"  class ="diagram">
-    <img src="assets/img/arch/3636diagrams.png"  class ="diagram">
-    <img src="assets/img/arch/363 36200plans.png"  class ="diagram">
-    <img src="assets/img/arch/363 36200plans2.jpg"  class ="diagram">
-    <img src="assets/img/arch/Pictures/arch 203/2048 2024 elevation2.jpg"  class ="diagram">
-
-    
-
-<div class="paragraph-text" style="margin-bottom: 100px">
-    <br><br><br>.
-</div>
-</div>
-<div class="clear"></div>
+            </div>
 
 
-<div id="footer-items-container">
-<div class="r-footer">
-
-</div>
-
-<!-- back to top button -->
-        <div id="back-to-top"><a href="#top">Top</a></div>
-
-
-</body>
-</html>
+        </body>
+    </html>
