@@ -15,8 +15,8 @@ $(document).ready(function() {
         },
         css3: true,
         paddingTop: 70,
-
-
+        	//options here
+	    autoScrolling:true
 
 
     });
