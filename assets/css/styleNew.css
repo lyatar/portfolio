@@ -1,9 +1,6 @@
 html, body {
     font-size: 16px;
-    /*color: #395967;*/
-    /*background: linear-gradient(180deg, #e1ecf4, white);*/
     background: linear-gradient(180deg, #e1ecf4, #e6e6e6);
-    /*background: #f9f9f9;*/
 
     background-attachment: fixed;
     height: 100%;
@@ -19,8 +16,6 @@ h1 {
 h4 {
     color: #395967;
     font-weight: 900;
-
-
 }
 
 p {
@@ -60,7 +55,6 @@ blockquote{
 
 .row {
     margin-bottom: 25px;
-
 }
 
 .thumbnail{
