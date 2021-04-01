@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet">
+		<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+
+		<!-- d3 scripts -->
+		<script src="https://d3js.org/d3.v3.js"></script>
+		<link rel="stylesheet" type="text/css" href="ARCH-229-s17/css/style_dv.css">
+		<script src="dy_working/dy.v0.min.js"></script>
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<style>
+		.reveal section p {
+		/* display: inline-block; */
+		font-size: 0.6em;
+		line-height: 1.2em;
+		vertical-align: top;
+		font-family: 'Lato', sans-serif;
+    	line-height: 1.5;
+	  	}
+
+		.reveal li{
+			font-size: 0.6em;
+			line-height: 2em;
+		}
+		
+	  	.reveal h1 { font-size: 1.5em;
+		    font-family: 'Playfair Display', serif;
+			color: #395967;
+		}
+
+		.reveal h2 { font-size: 1em;
+		    font-family: 'Playfair Display', serif;
+			color: #395967;
+		}
+
+		.container{
+			 display: flex;
+		}
+		.col{
+			flex: 1;
+		}
+		/* css for scrollable slide */
+		.scrollable {
+			overflow-y: auto  !important;
+			overflow-x: hidden !important;
+			height: 700px;
+		}
+				
+	</style>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#e1ecf4">
+					<h2>How Far From Comfort</h2>
+                    <div id = "dy-canvas" style="overflow: scroll; margin: 20px 0;" class="r-stretch"></div>
+                    <script src="ARCH-229-s17/js/script_dv.js"></script>
+                    <script src="ARCH-229-s17/js/data.js"></script>
+                    <script> onDataLoaded(dObj) </script>
+					<p style="font-size: 0.4em"> An epw file compatible web-based data visualization tool of how comfortable a climate is. <a href="http://laurenyatar.com/dataviz.html"> <strong>(link)</strong></a> </p>
+				</section>
+				<!-- <section>
+					<h1>Goals</h1>
+					<section><h2>1. Make it easier for architects to understand what the climate is like.</h2></section>
+					<section>2. Challenge Conventional Climate Visualizations.</section>
+					<section>3. Create an interactive tool. </section>
+				</section> -->
+				<section>
+					<h1>Goals</h1>
+					<p class="fragment fade-up">1. Make it easier for architects to understand what the climate is like.</h2></p>
+					<p class="fragment fade-up">2. Challenge Conventional Climate Visualizations.</p>
+					<p class="fragment fade-up">3. Create an interactive tool. </p>
+				</section>
+				<section>
+					<h1>Background</h1>
+					<p class="fragment">This was for a graduate seminar in the architecture department.</p>
+					<p class="fragment">Required coding knowledge, but no specific Javascript knowledge.</p>
+					<p class="fragment">Requirements were open as long as you were using climate epw data.</p>
+				</section>
+				<section>
+					<section>
+						<h2>Why do we need new tools?</h2>
+						<p class="fragment" data-fragment-index="2">Many of the current tools are hard to understand</p>
+						<p class="fragment" data-fragment-index="1"><img src="imgs/climate-consultant.jpg"></p>
+						<p class="fragment" data-fragment-index="3" style="font-size: 0.4em">You need to read an article to understand the chart</p>
+					</section>
+					<section>
+						<img src="imgs/climate-chart.png">
+					</section>
+					<section>
+						<h2>CAD Software is also complex</h2>
+						<p> i.e. Grasshopper, Honeybee, Lady Bug, DIVA
+							<img src="imgs/logronosim.png">
+						</p>
+					</section>
+				</section>
+				<section>
+					<h2>Process</h2>
+					<p class="fragment">Before working in D3, I went through a process of
+					<strong style="color: #395967">graph overlays</strong> and <strong style="color: #395967">analyzing data</span></strong> to understand what the charts were already conveying.</p>
+				</section>
+				<section>
+					<h2>Graph Overlays</h2>
+					<div class="container">
+						<div class="col fragment">
+							<img src="imgs/p1ai_Page_3.png">
+							<p style="font-size: 0.4em"p>Overlays over Climate Consultant graphs.</p>
+						</div>
+						<div class="col fragment">
+							<img src="imgs/p1ai_Page_4.png">
+							<p style="font-size: 0.4em"p>New charts in illustrator and my own commentary</p>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Discoveries from Graph Overlays</h2>
+					<p class="fragment"> Main thing I wanted to find out was when was a climate comfortable based on a criteria. </p>
+					<p class="fragment">Extremeties would require design changes in a project </p>
+					<p class="fragment">Counting hours does not tell you <i>when</i> it's hot or cold.</p>
+					<img class="fragment" src="imgs/simple.png" height="250">
+
+				</section>
+				<section>
+					<section>
+					<h2>Redefined Goal</h2>
+					<p class="fragment">To create a visualization that shows how many degrees we're away from the comfort zone given a specific time for a location.</p>
+					</section>
+					<section>
+						<p>Needed a mechanism that showed:</p>
+						<p class="fragment">1. When it's not comfortable</p>
+						<p class="fragment">2. When it's too hot or too cold</p>
+						<p class="fragment">3. By how much</p>
+						<p class="fragment" style="font-size: 0.5em; color: grey">(Actual temperature did not matter to me.) </p>
+					</section>
+				</section>
+				<section>
+					<h2>Data to Use</h2>
+					<p class="fragment ">			
+						<img width="100" src="imgs/file.png"> <br>
+						1. Values from epw file(dry bulb temp, dew point temp, rel humidity, etc.)
+					</p>
+					<p class="fragment" style="font-size: 0.4em; color: grey">(Our professor provided a package that parsed EPW file data for us already.)</p>
+					<p class="fragment">2. Formula (in this case comfort is a range (i.e., low < x < high))</p>
+				</section>
+				<section>
+					<h2>Python, Excel, Illustrator</h2>
+					<div class="r-stack">
+						<img class="fragment fade-out" data-fragment-index="0" src="imgs/test2.png">
+						<!-- <img class="fragment current-visible" data-fragment-index="0" src="imgs/a.png"> -->
+						<img class="fragment current-visible" data-fragment-index="0" src="imgs/b.png" height="325">
+						<img class="fragment current-visible" src="imgs/test.png">
+					</div>
+					<p style="font-size: 0.4em; color: grey">Preliminary experiments</p>
+				</section>
+				<section>
+					<h2>Positive Negative Bar Chart</h2>
+					<div class="container">
+						<div class="col fragment">
+						<!-- d3 -->
+							<!-- The dy-canvas div is where you should create any SVGs using D3 -->
+							<div id = "dy-canvas2" ></div>
+
+							<!-- Here we load your D3 script, which defines onDataLoaded -->
+							<script src="ARCH-229-s17/js/script2.js"></script>
+
+							<!-- Here we load the data.js file, which defines a single variable dObj -->
+							<script src="ARCH-229-s17/js/data2.js"></script>
+
+							<!-- Now we call the onDataLoaded function defined in script.js, passing in dObj -->
+							<script>
+							onDataLoaded2(july);
+							</script>
+                    	<!-- end d3 -->
+						<p class="fragment" data-fragment-index="1" style="font-size: 0.3em; color: grey">July - Fullerton, California Example</p>
+						</div>
+						<div class="col">
+							<p class="fragment" style="font-size: 0.5em">The horizontal bar chart was a winner:</p>
+							<p class="fragment" style="font-size: 0.5em;">1. You can easily see when it's too hot versus too cold (right vs left)</p>
+							<p class="fragment" style="font-size: 0.5em">2. You can see hourly trends in a month (during the summer it's too hot during the day, early morning/ late night is very cold, etc.)</p>
+							<p class="fragment" style="font-size: 0.5em">3. You can compare hours looking horizontally.</p>
+							<p class="fragment" style="font-size: 0.5em">4. If you see more ink, you know to pay more attention to those times.</p>
+							<p class="fragment" style="font-size: 0.4em; color: grey">(But be aware of too much "bling")</p>
+							
+						</div>
+					</div>
+				</section>
+				<section><h2>First Iteration</h2></section>
+				<section data-background-image="imgs/viz2.gif"></section>
+				<section><h2>First Iteration</h2>
+					<div class="container">
+
+						<div class="col">
+						<img src="imgs/sept_iteration1.png">
+						<p style="font-size: 0.3em; color: grey"> September - Fullerton, California Example</p>
+						</div>
+						
+						<div class="col" style="font-size: .75em">
+						<p class="fragment">Bar graph indicates how many degrees away from the comfort zone</p>
+						<p class="fragment">Each bar represents the average temperature for an hour monthly that is applied to the comfort formula. </p>
+						<p class="fragment">Light blue indicates it's too cold and red indicates it's too hot. </p>
+						<p class="fragment"> The line graph to the right of the graph is a graph of the original average temperatures. </p>
+						</div>
+						
+					</div>
+				</section>
+				<section class="scrollable" data-background-color="#e1ecf4">
+					<h2>First Iteration</h2>
+					<div style="height: 200px;">                    
+						<!-- i love d3 so much that i put 3 d3 visualizations on this page -->
+                        <!-- The dy-canvas div is where you should create any SVGs using D3 -->
+                        <div id = "dy-canvas3" ></div>
+
+                        <!-- Here we load your D3 script, which defines onDataLoaded -->
+                        <script src="ARCH-229-s17/js/script3.js"></script>
+
+                        <!-- Here we load the data.js file, which defines a single variable dObj -->
+                        <script src="ARCH-229-s17/js/data.js"></script>
+
+                        <!-- Now we call the onDataLoaded function defined in script.js, passing in dObj -->
+                        <script>
+                        onDataLoaded3(dObj)
+                        </script>
+                    <!-- end d3 -->
+				</div>
+				</section>
+				<section>
+					<h2>The Missing Pieces</h2>
+					<p class="fragment">Not clear how comfortable it was day to day</p>
+					<p class="fragment">Comparing across hours was difficult</p>
+					<p class="fragment" style="font-size: 0.5em; color: grey">(lost the advantages of a horizontal scroll) </p>
+					<img class="fragment" src="imgs/test3.png">
+				</section>
+				<section><h2>Latest Iteration</h2></section>
+				<section data-background-image="imgs/viz.gif"></section>
+				<section><h2>Changes</h2>
+					<div class="container">
+						<div class="col">
+							<img class="fragment" data-fragment-index="1"src="imgs/dv2-1.png">
+							<img class="fragment" data-fragment-index="4" src="imgs/dv2-2.png">
+							<p class="fragment" data-fragment-index="1" style="font-size: 0.3em; color: grey">Phoenix, Arizona Example</p>
+						</div>
+						
+						<div class="col" style="font-size: .75em">
+						<p class="fragment" data-fragment-index="2">the top half is a heat map where you can see the temperature for each day</p>
+						<p class="fragment" data-fragment-index="3">the more vibrant colors you see the more extreme temperatures</p>
+						<p class="fragment" data-fragment-index="5">the bottom half is a bar graph inverted on its side denoting how far away the monthly average is away from comfort</p>
+						<p class="fragment" data-fragment-index="6">the longer the bar, the more away from comfort</p>
+						<p class="fragment" data-fragment-index="7">side line plot indicates the high and lows </p>
+						<p class="fragment" data-fragment-index="8"> the light gray shading indicates the average temperature ranges calculated under the comfort function to see how faraway that temp really is from comfort </p>
+						</div>	
+					</div>
+				</section>
+				<section>
+					<h2>Ways to Improve Visualization</h2>
+					<div class="container">
+
+						<div class="col">
+							<img class="fragment" data-fragment-index="1" src="imgs/c.png">
+						</div>
+						
+						<div class="col">
+							<p class="fragment" data-fragment-index="1">Ability to set more conditions </p>
+							<p class="fragment">More variables (humidity, wind speed, etc.)</p>
+							<p class="fragment">Clearer visual articulation of what data is being shown</p>
+							<p class="fragment">Adjust Scale</p>
+							<p class="fragment" style="font-size: 0.4em; color: grey">(The scale goes from -30 to 30, but many places can be more than -30C from the comfort zone (Alaska), <br>but for a place to be 54C (129F) isn't as likely).)</p>
+							<p class="fragment">Ability to turn on and turn on functions and add more climates</p>
+						</div>
+						
+					</div>
+				</section>
+				<section>
+					<h2>Takeaways</h2>
+					<div class="container">
+
+						<div class="col fragment">
+							<img src="imgs/simple.png">
+							<p>Context is Important</p>
+						</div>
+						
+						<div class="col fragment">
+							<img src="imgs/dv1.png">
+							<p> Choreograph Data</p>
+						</div>
+						<div class="col fragment">
+							<img src="imgs/tw9.png">
+							<p> Interdisciplinary Skills</p>
+						</div>
+						
+					</div>
+				</section>
+				<section>
+					<h2>Lingering Questions</h2>
+					<p class="fragment"> What other kinds of information can we use to inform our design decisions?</p>
+					<img src="imgs/df2.png" class="fragment" height="350">
+					<p class="fragment" style="font-size: 0.4em; color: grey">( Are buildings a kind of data visualization? )</p>
+				</section>
+				<section>
+					<h1>Other Projects</h1>
+				</section>
+				<!-- <section data-background-image="imgs/1924happysun.png">
+				</section> -->
+				<section>
+					<div class="container">
+
+						<div class="col">
+							<p>If City then, [X,Y,Z]</p>
+							<a href="http://laurenyatar.com/twitter3"><img src="imgs/1924happysun.png" ></a>
+						</div>
+						
+						<div class="col">
+							<p>Twitter and Extreme Storm Weather</p>
+							<a href="http://laurenyatar.com/twitter3"><img src="imgs/tw1.png" ></a>
+						</div>
+						
+					</div>
+				</section>
+
+	
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
