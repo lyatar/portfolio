@@ -71,8 +71,13 @@ blockquote{
 	opacity: 0.1;
 }
 
-section {
+.section {
 }
+
+#section5 {
+    /* background-color: #e6e6e6; */
+}
+
 
 
 /*animation sytles*/
@@ -126,6 +131,17 @@ section {
     animation: visible 3s linear forwards;
     -webkit-animation-delay: 3s; /* Safari 4.0 - 8.0 */
     animation-delay: 2s;
+}
+
+.project-text {
+	/*color: #333;*/
+    color: #395967;
+	font-family: 'Playfair Display', serif;
+	font-size: 16px;
+}
+
+.project-body {
+    margin: 0px 30px 25px 20px;
 }
 
 .body-text, .subcaption-text {
@@ -402,3 +418,9 @@ tr:after {
 
 
 }
+
+@media (max-width: 768px) {
+    .col-md-4.text-right {
+            text-align: center;
+     } 
+  }
